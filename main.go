@@ -20,23 +20,24 @@ type CriterionStruct struct {
 	NegativeMeaning string `xml:"negativeMeaning"`
 }
 
-func openDictionary(dictionary, service string) (*os.File, error) {
-	specific_path := fmt.Sprintf("./dictionaries/%s_%s.xml", service, dictionary)
-	general_path := fmt.Sprintf("./dictionaries/%s.xml", dictionary)
-	dict, err := os.Open(specific_path)
+func openDictionary(dictionary, service string) (*os.File, string, error) {
+	specific_dict := fmt.Sprintf("%s_%s.xml", service, dictionary)
+	general_dict := fmt.Sprintf("%s.xml", dictionary)
+	dict, err := os.Open("./dictionaries/" + specific_dict)
 	if err != nil {
-		if pathErr, ok := err.(*fs.PathError); ok {
+		if _, ok := err.(*fs.PathError); ok {
 			// add output here that wasn't found specific dict for this service and used general one
-			fmt.Printf("%s (path \"%s\")\n", pathErr.Err, pathErr.Path)
-			dict, err = os.Open(general_path)
+			//fmt.Printf("%s (path \"%s\")\n", pathErr.Err, pathErr.Path)
+			dict, err = os.Open("./dictionaries/" + general_dict)
 			if err != nil {
-				return nil, fmt.Errorf("%s.xml dictionary opening failure: %v", dictionary, err)
+				return nil, general_dict, fmt.Errorf("%s.xml dictionary opening failure: %v", dictionary, err)
 			}
+			return dict, general_dict, nil
 		} else {
-			return nil, fmt.Errorf("%s_%s.xml dictionary opening failure: %v", service, dictionary, err)
+			return nil, specific_dict, fmt.Errorf("%s_%s.xml dictionary opening failure: %v", service, dictionary, err)
 		}
 	}
-	return dict, nil
+	return dict, specific_dict, nil
 }
 
 func decodeRejectReasonsFromDict(dict *os.File, rejections map[string]string) error {
@@ -122,8 +123,13 @@ func decodeNegativeMeaningsFromDict(dict *os.File, negMeanings map[CriterionStru
 }
 
 func main() {
-
+	logFile, err := os.Create("log")
+	if err != nil {
+		log.Printf("couldn't create log file: %v", err)
+	}
 	fileSystem := os.DirFS(".")
+
+	indent := "        "
 
 	text := `do
 $$
@@ -141,7 +147,8 @@ begin
 
 	fs.WalkDir(fileSystem, "reglaments", func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
-			log.Fatal(err)
+			logFile.Write([]byte("couldn't open reglaments dir: " + err.Error()))
+			os.Exit(1)
 		}
 		if d.IsDir() {
 			return nil
@@ -153,7 +160,8 @@ begin
 
 		reglament, err := os.Open(path)
 		if err != nil {
-			log.Fatalf("reglament opening failure: %v", err)
+			logFile.Write([]byte(fmt.Sprintf("couldn't open reglament at path \"%s\": %v", path, err)))
+			return nil
 		}
 		defer reglament.Close()
 
@@ -177,14 +185,16 @@ begin
 				case "criterion":
 					err = decoder.DecodeElement(&crit, &t)
 					if err != nil {
-						log.Fatalf("criterion parsing failure: %v", err)
+						logFile.Write([]byte(fmt.Sprintf("criterion parsing failure in reglament at path \"%s\": %v", path, err)))
+						return nil
 					}
 					//fmt.Printf("%v\n", crit)
 				case "rejectionReason":
 					var rej RejectionReasonStruct
 					err = decoder.DecodeElement(&rej, &t)
 					if err != nil {
-						log.Fatalf("rejectionReason parsing failure: %v", err)
+						logFile.Write([]byte(fmt.Sprintf("rejectionReason parsing failure in reglament at path \"%s\": %v", path, err)))
+						return nil
 					}
 					rejectionReason = rej.Name
 					//fmt.Printf("%v\n", criteria)
@@ -209,75 +219,106 @@ begin
 			}
 		}
 
-		rejectReasonDict, err := openDictionary("rejectReason", service)
+		rejectReasonDict, usedRejDict, err := openDictionary("rejectReason", service)
 		if err != nil {
 			// add to output file
-			log.Printf("couldn't open rejectReason dictionary: %v\n", err)
+			logFile.Write([]byte(fmt.Sprintf("couldn't open rejectReason dictionary: %v", err)))
 		} else {
 			defer rejectReasonDict.Close()
 			err = decodeRejectReasonsFromDict(rejectReasonDict, rejections)
 			if err != nil {
 				//write to output file error message
+				logFile.Write([]byte(fmt.Sprintf("couldn't decode rejectReason dictionary: %v", err)))
 			}
 		}
 
-		negativeMeaningDict, err := openDictionary("reasonForSuccessDecision", service)
+		negativeMeaningDict, usedReasonDict, err := openDictionary("reasonForSuccessDecision", service)
 		if err != nil {
 			// add to output file
-			log.Printf("couldn't open reasonForSuccessDecision dictionary: %v\n", err)
+			logFile.Write([]byte(fmt.Sprintf("couldn't open reasonForSuccessDecision dictionary: %v", err)))
 		} else {
 			defer negativeMeaningDict.Close()
 			err = decodeNegativeMeaningsFromDict(negativeMeaningDict, negMeanings)
 			if err != nil {
 				//write to output file error message
+				logFile.Write([]byte(fmt.Sprintf("couldn't decode reasonForSuccessDecision dictionary: %v", err)))
 			}
 		}
 
 		i := 0
 		if len(rejections) != 0 {
+			text += "\n" + indent[:4] + "--Used " + usedRejDict
 			for rejectName, rejectId := range rejections {
 				i++
 				if len([]rune(rejectName)) >= 1000 {
-					text += fmt.Sprintf("          -- %d characters in full_name, could be limit in db on that column in 1000 symbols\n        --", len([]rune(rejectName)))
+					text += fmt.Sprintf("\n%s--%d characters in full_name, could be limit in db on that column in 1000 symbols",
+						indent, len([]rune(rejectName)))
+				}
+				if rejectId == "TRASH" {
+					text += fmt.Sprintf("\n%s--couldn't find GUID myself, so you need to do that using name dictionary", indent)
 				}
 
-				if !strings.HasSuffix(text, "--") {
-					text += "        "
-					if rejectId == "TRASH" {
-						text += "  --couldn't find myself, so you need to do that using name dictionary:\n        --"
-					}
+				if !strings.HasSuffix(text, ";") && !strings.HasSuffix(text, "xml") {
+					text += "\n" + indent + "  --"
+				} else {
+					text += "\n" + indent
 				}
-				text += fmt.Sprintf("insert into d_ref_dependents (alias, code_kcr, dependent_type, full_name, name, is_draft, sys_status) values ('Opal%sRejReason%d', '%s', key_type, '%s','%s', 0, 0);\n",
+				text += fmt.Sprintf("insert into d_ref_dependents (alias, code_kcr, dependent_type, full_name, name, is_draft, sys_status) values ('Opal%sRejReason%d', '%s', key_type, '%s','%s', 0, 0);",
 					service, i, rejectId, rejectName, rejectName)
 			}
 			text += "\n"
 		}
 		if len(negMeanings) != 0 {
+			text += "\n" + indent[:4] + "--Used " + usedReasonDict
 			for obj, negMeanId := range negMeanings {
 				i++
 				if len([]rune(obj.NegativeMeaning)) >= 1000 {
-					text += fmt.Sprintf("          -- %d characters in full_name, could be limit in db on that column in 1000 symbols\n        ", len([]rune(obj.NegativeMeaning)))
+					text += fmt.Sprintf("\n%s-- %d characters in full_name, could be limit in db on that column in 1000 symbols",
+						indent, len([]rune(obj.NegativeMeaning)))
+				}
+				if negMeanId == "TRASH" {
+					text += fmt.Sprintf("\n%s--couldn't find GUID myself, so you need to do that using name dictionary", indent)
 				}
 
-				if !strings.HasSuffix(text, "--") {
-					text += "        "
-					if negMeanId == "TRASH" {
-						text += "  --couldn't find myself, so you need to do that. name in dictionary:\n        --"
-					}
+				if !strings.HasSuffix(text, ";") && !strings.HasSuffix(text, "xml") {
+					text += "\n" + indent + "  --"
+				} else {
+					text += "\n" + indent
 				}
-				text += fmt.Sprintf("insert into d_ref_dependents (alias, code_kcr, dependent_type, full_name, name, is_draft, sys_status) values ('Opal%sRejMeaning%d', '%s', key_type, '%s','%s', 0, 0);\n",
+				text += fmt.Sprintf("insert into d_ref_dependents (alias, code_kcr, dependent_type, full_name, name, is_draft, sys_status) values ('Opal%sRejMeaning%d', '%s', key_type, '%s','%s', 0, 0);",
 					service, i, negMeanId, obj.NegativeMeaning, obj.NegativeMeaning)
 			}
 		}
+		text += "\n\n" + indent[:4] + "-----------------------------------------"
 
 		return nil
 	})
-
-	text += `    end loop;
+	text += "\n" + `    end loop;
 end;
 $$;`
 
-	outputFile, err := os.Create("script_to_add_rejection_reasons.sql")
+	text += "\n\n\n" + `
+--запрос с фильтром для проверки созданных отказов на схеме
+select * from <scheme>.d_ref_dependents where alias like "Opal%";
+
+
+--чистка бд от созданных для опала отказов
+do
+$$
+declare
+	rec record;
+	key_type int8;
+begin
+	for rec in (select scheme from regadm.m_projects where scheme = 'kostgo') loop
+		perform set_config('search_path', rec.scheme, true);
+		raise info '%', rec.scheme;
+
+		delete from d_ref_dependents where alias like "Opal%";
+	end loop;
+end;
+$$;`
+
+	outputFile, err := os.Create("script_to_add_rejection_reasons_for_opal.sql")
 	if err != nil {
 		log.Fatalf("output creation failure: %v", err)
 	}
