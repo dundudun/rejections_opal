@@ -129,7 +129,7 @@ func main() {
 	}
 	fileSystem := os.DirFS(".")
 
-	indent := "        "
+	indent := "    "
 
 	text := `do
 $$
@@ -247,7 +247,7 @@ begin
 
 		i := 0
 		if len(rejections) != 0 {
-			text += "\n" + indent[:4] + "--Used " + usedRejDict
+			text += "\n" + indent[:2] + "--Used " + usedRejDict
 			for rejectName, rejectId := range rejections {
 				i++
 				if len([]rune(rejectName)) >= 1000 {
@@ -255,7 +255,7 @@ begin
 						indent, len([]rune(rejectName)))
 				}
 				if rejectId == "TRASH" {
-					text += fmt.Sprintf("\n%s--couldn't find GUID myself, so you need to do that using name dictionary", indent)
+					text += fmt.Sprintf("\n%s--couldn't find GUID myself, so you need to do that using name in dictionary", indent)
 				}
 
 				if !strings.HasSuffix(text, ";") && !strings.HasSuffix(text, "xml") {
@@ -269,7 +269,7 @@ begin
 			text += "\n"
 		}
 		if len(negMeanings) != 0 {
-			text += "\n" + indent[:4] + "--Used " + usedReasonDict
+			text += "\n" + indent[:2] + "--Used " + usedReasonDict
 			for obj, negMeanId := range negMeanings {
 				i++
 				if len([]rune(obj.NegativeMeaning)) >= 1000 {
@@ -277,7 +277,7 @@ begin
 						indent, len([]rune(obj.NegativeMeaning)))
 				}
 				if negMeanId == "TRASH" {
-					text += fmt.Sprintf("\n%s--couldn't find GUID myself, so you need to do that using name dictionary", indent)
+					text += fmt.Sprintf("\n%s--couldn't find GUID myself, so you need to do that using name in dictionary", indent)
 				}
 
 				if !strings.HasSuffix(text, ";") && !strings.HasSuffix(text, "xml") {
