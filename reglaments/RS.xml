@@ -3,10 +3,10 @@
     <ns2:GetResponseResponse xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.2" xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2" xmlns:ns3="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/faults/1.2">
       <ns2:ResponseMessage>
         <ns2:Response xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2" Id="SIGNED_BY_SMEV">
-          <ns2:OriginalMessageId>4b1c61b0-b1fe-11ef-b0a1-0242ac641502</ns2:OriginalMessageId>
+          <ns2:OriginalMessageId>2ca77e80-b87d-11ef-80be-0242ac641802</ns2:OriginalMessageId>
           <SenderProvidedResponseData xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.2" xmlns:ns3="http://www.w3.org/2004/08/xop/include" Id="SIGNED_BY_CONSUMER">
-            <MessageID>57a0a505-b1fe-11ef-8a0f-3a09311888cb</MessageID>
-            <To>eyJzaWQiOjE3MzQ3ODk3OCwibWlkIjoiNGIxYzYxYjAtYjFmZS0xMWVmLWIwYTEtMDI0MmFjNjQxNTAyIiwiZW9sIjowLCJzbGMiOiJyb3N0ZWxla29tLnJ1X0tDUl8xLjAuMV9LQ1JSZXF1ZXN0IiwibW5tIjoiVTc5ODMwMSIsIm5zIjoidXJuOi8vcm9zdGVsZWtvbS5ydS9LQ1IvMS4wLjYiLCJyZW9sIjowLCJvcmlkIjpudWxsfQ==</To>
+            <MessageID>99628ca8-b87d-11ef-b8be-4656814f85ff</MessageID>
+            <To>eyJzaWQiOjE3MzQ3ODk3OCwibWlkIjoiMmNhNzdlODAtYjg3ZC0xMWVmLTgwYmUtMDI0MmFjNjQxODAyIiwiZW9sIjowLCJzbGMiOiJyb3N0ZWxla29tLnJ1X0tDUl8xLjAuMV9LQ1JSZXF1ZXN0IiwibW5tIjoiVTc5ODMwMSIsIm5zIjoidXJuOi8vcm9zdGVsZWtvbS5ydS9LQ1IvMS4wLjYiLCJyZW9sIjowLCJvcmlkIjpudWxsfQ==</To>
             <ns2:MessagePrimaryContent>
               <tns:KCRResponse xmlns:tns="urn://rostelekom.ru/KCR/1.0.6">
                 <tns:kcrService>
@@ -475,6 +475,12 @@
                             <tns:isTypical>false</tns:isTypical>
                             <tns:isPossibleMultipleAnswer>false</tns:isPossibleMultipleAnswer>
                           </tns:questions>
+                          <tns:questions>
+                            <tns:id>273471</tns:id>
+                            <tns:userQuestion>Какой вид экспертизы проектной документации?</tns:userQuestion>
+                            <tns:isTypical>false</tns:isTypical>
+                            <tns:isPossibleMultipleAnswer>false</tns:isPossibleMultipleAnswer>
+                          </tns:questions>
                           <tns:answers>
                             <tns:id>609923</tns:id>
                             <tns:userAnswerName>объект капитального строительства, в состав которого входит линейный объект</tns:userAnswerName>
@@ -678,38 +684,6 @@
                                 </tns:documentCategory>
                                 <tns:documents>
                                   <tns:document>
-                                    <tns:name>проект организации работ по сносу объектов капитального строительства, их частей</tns:name>
-                                  </tns:document>
-                                  <tns:admProcedures>
-                                    <tns:admProcedure>
-                                      <tns:name>прием заявления и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
-                                    </tns:admProcedure>
-                                    <tns:deadline>1</tns:deadline>
-                                    <tns:unitsOfMeasurement>
-                                      <tns:name>Рабочий день</tns:name>
-                                    </tns:unitsOfMeasurement>
-                                  </tns:admProcedures>
-                                  <tns:criteria>
-                                    <tns:criterion>
-                                      <tns:name>отсутствие противоречивых сведений в запросе о предоставлении услуги и в документе</tns:name>
-                                    </tns:criterion>
-                                    <tns:decisionType>
-                                      <tns:name>Отказ в приеме документов</tns:name>
-                                    </tns:decisionType>
-                                    <tns:rejectionReason>
-                                      <tns:name>непредставление заявителем необходимых документов и сведений, либо представление недостоверных сведений</tns:name>
-                                    </tns:rejectionReason>
-                                  </tns:criteria>
-                                  <tns:isDecisionMaking>false</tns:isDecisionMaking>
-                                  <tns:isRegistryEntry>false</tns:isRegistryEntry>
-                                  <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
-                                  <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
-                                  <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
-                                  <tns:isSentToApplicant>false</tns:isSentToApplicant>
-                                  <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
-                                </tns:documents>
-                                <tns:documents>
-                                  <tns:document>
                                     <tns:name>проект организации работ по сносу объектов строительства, их частей в случае необходимости сноса объектов строительства, их частей для строительства, реконструкции других объектов строительства</tns:name>
                                   </tns:document>
                                   <tns:admProcedures>
@@ -850,23 +824,6 @@
                                     <tns:rejectionReason>
                                       <tns:name>непредставление заявителем необходимых документов и сведений, либо представление недостоверных сведений</tns:name>
                                     </tns:rejectionReason>
-                                  </tns:criteria>
-                                  <tns:criteria>
-                                    <tns:criterion>
-                                      <tns:name>результаты инженерных изысканий соответствуют требованиям (в том числе к составу указанных результатов), установленным законодательством Российской Федерации</tns:name>
-                                    </tns:criterion>
-                                    <tns:decisionType>
-                                      <tns:name>Отказ в приеме документов</tns:name>
-                                    </tns:decisionType>
-                                  </tns:criteria>
-                                  <tns:criteria>
-                                    <tns:criterion>
-                                      <tns:name>документ соответствует форме, формату или содержанию согласно требованиям законодательства Российской Федерации</tns:name>
-                                      <tns:negativeMeaning>документ не соответствует форме, формату или содержанию согласно требованиям законодательства Российской Федерации</tns:negativeMeaning>
-                                    </tns:criterion>
-                                    <tns:decisionType>
-                                      <tns:name>Отказ в приеме документов</tns:name>
-                                    </tns:decisionType>
                                   </tns:criteria>
                                   <tns:isDecisionMaking>false</tns:isDecisionMaking>
                                   <tns:isRegistryEntry>false</tns:isRegistryEntry>
@@ -1040,17 +997,8 @@
                                   </tns:attributeSettings>
                                   <tns:criteria>
                                     <tns:criterion>
-                                      <tns:name>сведения заполнены корректно</tns:name>
-                                      <tns:negativeMeaning>сведения заполнены некорректно</tns:negativeMeaning>
-                                    </tns:criterion>
-                                    <tns:decisionType>
-                                      <tns:name>Отказ в приеме документов</tns:name>
-                                    </tns:decisionType>
-                                  </tns:criteria>
-                                  <tns:criteria>
-                                    <tns:criterion>
-                                      <tns:name>документ соответствует форме, формату или содержанию согласно требованиям законодательства Российской Федерации</tns:name>
-                                      <tns:negativeMeaning>документ не соответствует форме, формату или содержанию согласно требованиям законодательства Российской Федерации</tns:negativeMeaning>
+                                      <tns:name>документы, являющиеся обязательными для представления, представлены заявителем</tns:name>
+                                      <tns:negativeMeaning>документы, являющиеся обязательными для представления, не представлены заявителем</tns:negativeMeaning>
                                     </tns:criterion>
                                     <tns:decisionType>
                                       <tns:name>Отказ в приеме документов</tns:name>
@@ -1172,6 +1120,77 @@
                                     <tns:rejectionReason>
                                       <tns:name>непредставление заявителем необходимых документов и сведений, либо представление недостоверных сведений</tns:name>
                                     </tns:rejectionReason>
+                                  </tns:criteria>
+                                  <tns:isDecisionMaking>false</tns:isDecisionMaking>
+                                  <tns:isRegistryEntry>false</tns:isRegistryEntry>
+                                  <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
+                                  <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
+                                  <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
+                                  <tns:isSentToApplicant>false</tns:isSentToApplicant>
+                                  <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:name>решения и мероприятия проектной документации, направленные на обеспечение доступа инвалидов к объекту (в случае подготовки проектной документации применительно к объектам здравоохранения, образования, культуры, отдыха, спорта и иным объектам социально-культурного и коммунально-бытового назначения, объектам транспорта, торговли, общественного питания, объектам делового, административного, финансового, религиозного назначения, объектам жилищного фонда)</tns:name>
+                                  </tns:document>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>рассмотрение запроса и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>предоставление результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>межведомственное информационное взаимодействие</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>принятие решения о предоставлении (об отказе в предоставлении) Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>оценка сведений о заявителе и (или) объектах, принадлежащих заявителю, и (или) иных объектах</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>получение дополнительных сведений от заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>приостановление предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>профилирование заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>прием заявления и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>распределение результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:name>документы, являющиеся обязательными для представления, предоставлены</tns:name>
+                                      <tns:negativeMeaning>документы, являющиеся обязательными для представления, не предоставлены</tns:negativeMeaning>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:name>Отказ в предоставлении услуги</tns:name>
+                                    </tns:decisionType>
                                   </tns:criteria>
                                   <tns:isDecisionMaking>false</tns:isDecisionMaking>
                                   <tns:isRegistryEntry>false</tns:isRegistryEntry>
@@ -1812,6 +1831,500 @@
                                 </tns:requests>
                               </tns:smev3>
                             </tns:interdepartmentalRequest>
+                            <tns:documents>
+                              <tns:documentsCategory>
+                                <tns:documentCategory>
+                                  <tns:name>документы, необходимые для выдачи разрешения на строительство</tns:name>
+                                </tns:documentCategory>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:name>схема планировочной организации земельного участка</tns:name>
+                                  </tns:document>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>рассмотрение запроса и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>принятие решения о предоставлении (об отказе в предоставлении) Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>профилирование заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>прием заявления и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>место размещения объекта капитального строительства</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>обозначение подъездов к объекту капитального строительства</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>обозначением проходов к объекту капитального строительства</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>обозначение границ зон действия публичных сервитутов</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>обозначение границ зон объектов археологического наследия</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>выполнение в соответствии с информацией, указанной в градостроительном плане земельного участка</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>а) характеристику земельного участка, предоставленного для размещения объекта капитального строительства</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>б) обоснование границ санитарно-защитных зон объектов капитального строительства в пределах границ земельного участка - в случае необходимости определения указанных зон в соответствии с законодательством Российской Федерации</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>в) обоснование планировочной организации земельного участка в соответствии с градостроительным и техническим регламентами либо документами об использовании земельного участка (если на земельный участок не распространяется действие градостроительного регламента или в отношении его не устанавливается градостроительный регламент)</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>г) технико-экономические показатели земельного участка, предоставленного для размещения объекта капитального строительства</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>д) обоснование решений по инженерной подготовке территории, в том числе решений по инженерной защите территории и объектов капитального строительства от последствий опасных геологических процессов, паводковых, поверхностных и грунтовых вод</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>е) описание организации рельефа вертикальной планировкой</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>ж) описание решений по благоустройству территории</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>з) зонирование территории земельного участка, предоставленного для размещения объекта капитального строительства, обоснование функционального назначения и принципиальной схемы размещения зон, обоснование размещения зданий и сооружений (основного, вспомогательного, подсобного, складского и обслуживающего назначения) объектов капитального строительства - для объектов производственного назначения</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>и) обоснование схем транспортных коммуникаций, обеспечивающих внешние и внутренние (в том числе межцеховые) грузоперевозки, - для объектов производственного назначения</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>к) характеристику и технические показатели транспортных коммуникаций (при наличии таких коммуникаций) - для объектов производственного назначения</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>л) обоснование схем транспортных коммуникаций, обеспечивающих внешний и внутренний подъезд к объекту капитального строительства, - для объектов непроизводственного назначения</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>в графической части</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>м) схему планировочной организации земельного участка с отображением:</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>мест размещения существующих и проектируемых объектов капитального строительства с указанием существующих и проектируемых подъездов и подходов к ним</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>границ зон действия публичных сервитутов (при их наличии)</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>зданий и сооружений объекта капитального строительства, подлежащих сносу (при их наличии)</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>решений по планировке, благоустройству, озеленению и освещению территории</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>этапов строительства объекта капитального строительства</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>схемы движения транспортных средств на строительной площадке</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>н) план земляных масс</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>о) сводный план сетей инженерно-технического обеспечения с обозначением мест подключения проектируемого объекта капитального строительства к существующим сетям инженерно-технического обеспечения</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:name>п) ситуационный план размещения объекта капитального строительства в границах земельного участка, предоставленного для размещения этого объекта, с указанием границ населенных пунктов, непосредственно примыкающих к границам указанного земельного участка, границ зон с особыми условиями их использования, предусмотренных Градостроительным кодексом Российской Федерации, границ территорий, подверженных риску возникновения чрезвычайных ситуаций природного и техногенного характера, а также с отображением проектируемых транспортных и инженерных коммуникаций с обозначением мест их присоединения к существующим транспортным и инженерным коммуникациям - для объектов производственного назначения</tns:name>
+                                    </tns:attribute>
+                                  </tns:attributeSettings>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:name>документы, являющиеся обязательными для представления, представлены заявителем</tns:name>
+                                      <tns:negativeMeaning>документы, являющиеся обязательными для представления, не представлены заявителем</tns:negativeMeaning>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:name>Отказ в приеме документов</tns:name>
+                                    </tns:decisionType>
+                                  </tns:criteria>
+                                  <tns:isDecisionMaking>false</tns:isDecisionMaking>
+                                  <tns:isRegistryEntry>false</tns:isRegistryEntry>
+                                  <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
+                                  <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
+                                  <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
+                                  <tns:isSentToApplicant>false</tns:isSentToApplicant>
+                                  <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:name>результаты инженерных изысканий</tns:name>
+                                  </tns:document>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>рассмотрение запроса и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>предоставление результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>межведомственное информационное взаимодействие</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>принятие решения о предоставлении (об отказе в предоставлении) Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>оценка сведений о заявителе и (или) объектах, принадлежащих заявителю, и (или) иных объектах</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>профилирование заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>прием заявления и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:name>документы, являющиеся обязательными для представления, представлены заявителем</tns:name>
+                                      <tns:negativeMeaning>документы, являющиеся обязательными для представления, не представлены заявителем</tns:negativeMeaning>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:name>Отказ в приеме документов</tns:name>
+                                    </tns:decisionType>
+                                  </tns:criteria>
+                                  <tns:isDecisionMaking>false</tns:isDecisionMaking>
+                                  <tns:isRegistryEntry>false</tns:isRegistryEntry>
+                                  <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
+                                  <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
+                                  <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
+                                  <tns:isSentToApplicant>false</tns:isSentToApplicant>
+                                  <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:name>решения и мероприятия проектной документации, направленные на обеспечение доступа инвалидов к объекту (в случае подготовки проектной документации применительно к объектам здравоохранения, образования, культуры, отдыха, спорта и иным объектам социально-культурного и коммунально-бытового назначения, объектам транспорта, торговли, общественного питания, объектам делового, административного, финансового, религиозного назначения, объектам жилищного фонда)</tns:name>
+                                  </tns:document>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>рассмотрение запроса и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>предоставление результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>межведомственное информационное взаимодействие</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>принятие решения о предоставлении (об отказе в предоставлении) Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>оценка сведений о заявителе и (или) объектах, принадлежащих заявителю, и (или) иных объектах</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>получение дополнительных сведений от заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>приостановление предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>профилирование заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>прием заявления и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>распределение результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:name>документы, являющиеся обязательными для представления, предоставлены</tns:name>
+                                      <tns:negativeMeaning>документы, являющиеся обязательными для представления, не предоставлены</tns:negativeMeaning>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:name>Отказ в приеме документов</tns:name>
+                                    </tns:decisionType>
+                                  </tns:criteria>
+                                  <tns:isDecisionMaking>false</tns:isDecisionMaking>
+                                  <tns:isRegistryEntry>false</tns:isRegistryEntry>
+                                  <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
+                                  <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
+                                  <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
+                                  <tns:isSentToApplicant>false</tns:isSentToApplicant>
+                                  <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:name>проект организации строительства объекта капитального строительства</tns:name>
+                                  </tns:document>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>рассмотрение запроса и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>предоставление результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>межведомственное информационное взаимодействие</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>принятие решения о предоставлении (об отказе в предоставлении) Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>оценка сведений о заявителе и (или) объектах, принадлежащих заявителю, и (или) иных объектах</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>получение дополнительных сведений от заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>приостановление предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>профилирование заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>прием заявления и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>распределение результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:name>документы, являющиеся обязательными для представления, представлены заявителем</tns:name>
+                                      <tns:negativeMeaning>документы, являющиеся обязательными для представления, не представлены заявителем</tns:negativeMeaning>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:name>Отказ в приеме документов</tns:name>
+                                    </tns:decisionType>
+                                  </tns:criteria>
+                                  <tns:isDecisionMaking>false</tns:isDecisionMaking>
+                                  <tns:isRegistryEntry>false</tns:isRegistryEntry>
+                                  <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
+                                  <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
+                                  <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
+                                  <tns:isSentToApplicant>false</tns:isSentToApplicant>
+                                  <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:name>пояснительная записка</tns:name>
+                                  </tns:document>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>рассмотрение запроса и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>предоставление результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>межведомственное информационное взаимодействие</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>принятие решения о предоставлении (об отказе в предоставлении) Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>оценка сведений о заявителе и (или) объектах, принадлежащих заявителю, и (или) иных объектах</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>профилирование заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>прием заявления и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:name>представление полного комплекта документов</tns:name>
+                                      <tns:negativeMeaning>представление неполного комплекта документов</tns:negativeMeaning>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:name>Отказ в приеме документов</tns:name>
+                                    </tns:decisionType>
+                                  </tns:criteria>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:name>документы переведены на русский язык и (или) их перевод на русский язык заверен печатью заявителя (при наличии печати)</tns:name>
+                                      <tns:negativeMeaning>документы не переведены на русский язык и (или) их перевод на русский язык не заверен печатью заявителя (при наличии печати)</tns:negativeMeaning>
+                                    </tns:criterion>
+                                  </tns:criteria>
+                                  <tns:isDecisionMaking>false</tns:isDecisionMaking>
+                                  <tns:isRegistryEntry>false</tns:isRegistryEntry>
+                                  <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
+                                  <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
+                                  <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
+                                  <tns:isSentToApplicant>false</tns:isSentToApplicant>
+                                  <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
+                                </tns:documents>
+                              </tns:documentsCategory>
+                              <tns:documentsCategory>
+                                <tns:documentCategory>
+                                  <tns:name>разрешительные документы</tns:name>
+                                </tns:documentCategory>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:name>положительное заключение экспертизы проектной документации</tns:name>
+                                  </tns:document>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>рассмотрение запроса и документов и (или) информации, необходимых для предоставления Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>предоставление результата Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>принятие решения о предоставлении (об отказе в предоставлении) Услуги</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:name>получение дополнительных сведений от заявителя</tns:name>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:name>документ представлен</tns:name>
+                                      <tns:negativeMeaning>документ не представлен</tns:negativeMeaning>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:name>Отказ в приеме документов</tns:name>
+                                    </tns:decisionType>
+                                  </tns:criteria>
+                                  <tns:isDecisionMaking>false</tns:isDecisionMaking>
+                                  <tns:isRegistryEntry>false</tns:isRegistryEntry>
+                                  <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
+                                  <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
+                                  <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
+                                  <tns:isSentToApplicant>false</tns:isSentToApplicant>
+                                  <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
+                                </tns:documents>
+                              </tns:documentsCategory>
+                            </tns:documents>
                           </tns:answers>
                           <tns:answers>
                             <tns:id>609904</tns:id>
@@ -3106,6 +3619,43 @@
                                 </tns:requests>
                               </tns:smev3>
                             </tns:interdepartmentalRequest>
+                          </tns:answers>
+                          <tns:answers>
+                            <tns:id>686829</tns:id>
+                            <tns:userAnswerName>государственная экспертиза</tns:userAnswerName>
+                            <tns:isTypical>false</tns:isTypical>
+                            <tns:isPossibleMultipleAnswer>false</tns:isPossibleMultipleAnswer>
+                            <tns:isProactive>false</tns:isProactive>
+                          </tns:answers>
+                          <tns:answers>
+                            <tns:id>686830</tns:id>
+                            <tns:userAnswerName>негосударственная экспертиза</tns:userAnswerName>
+                            <tns:isTypical>false</tns:isTypical>
+                            <tns:isPossibleMultipleAnswer>false</tns:isPossibleMultipleAnswer>
+                            <tns:isProactive>false</tns:isProactive>
+                            <tns:additionalInformations>
+                              <tns:infoType>
+                                <tns:name>Сведения об экспертной организации, включенной в реестр экспертный организаций</tns:name>
+                              </tns:infoType>
+                              <tns:admProcedures>
+                                <tns:admProcedure>
+                                  <tns:name>принятие решения о предоставлении (об отказе в предоставлении) Услуги</tns:name>
+                                </tns:admProcedure>
+                              </tns:admProcedures>
+                              <tns:attributeSettings>
+                                <tns:attribute>
+                                  <tns:name>регистрационный номер в реестре экспертных организаций</tns:name>
+                                </tns:attribute>
+                              </tns:attributeSettings>
+                              <tns:isDecisionMaking>false</tns:isDecisionMaking>
+                              <tns:isRegistryEntry>false</tns:isRegistryEntry>
+                              <tns:isAssessmentProcedure>false</tns:isAssessmentProcedure>
+                              <tns:isInterdepartmentalInteraction>false</tns:isInterdepartmentalInteraction>
+                              <tns:isInteractionWithApplicant>false</tns:isInteractionWithApplicant>
+                              <tns:isSentToApplicant>false</tns:isSentToApplicant>
+                              <tns:isPaymentCalculation>false</tns:isPaymentCalculation>
+                              <tns:isProactive>false</tns:isProactive>
+                            </tns:additionalInformations>
                           </tns:answers>
                         </tns:profilingSettings>
                       </tns:profiling>
@@ -7936,7 +8486,7 @@
                             <tns:answersId>609903</tns:answersId>
                             <tns:answersId>609884</tns:answersId>
                             <tns:parentId>188448</tns:parentId>
-                            <tns:targetQuestion>241934</tns:targetQuestion>
+                            <tns:targetQuestion>273471</tns:targetQuestion>
                             <tns:targetQuestion>241935</tns:targetQuestion>
                           </tns:questions>
                           <tns:questions>
@@ -8068,6 +8618,13 @@
                             <tns:parentId>188441</tns:parentId>
                             <tns:targetQuestion>241931</tns:targetQuestion>
                             <tns:targetQuestion>241931</tns:targetQuestion>
+                          </tns:questions>
+                          <tns:questions>
+                            <tns:id>273471</tns:id>
+                            <tns:answersId>686829</tns:answersId>
+                            <tns:answersId>686830</tns:answersId>
+                            <tns:targetQuestion>241935</tns:targetQuestion>
+                            <tns:targetQuestion>241935</tns:targetQuestion>
                           </tns:questions>
                           <tns:answers>
                             <tns:id>609923</tns:id>
@@ -8300,74 +8857,6 @@
                                 <tns:isRequiredOptional>true</tns:isRequiredOptional>
                                 <tns:documents>
                                   <tns:document>
-                                    <tns:id>0ae94761-8367-1f9a-8183-68e5bf070001</tns:id>
-                                    <tns:dictionaryCode>document</tns:dictionaryCode>
-                                  </tns:document>
-                                  <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
-                                  <tns:actions>
-                                    <tns:applyChannel>
-                                      <tns:id>ebe14120-9f5e-11ea-b64e-001a4a16047d</tns:id>
-                                      <tns:name>посредством Единого портала</tns:name>
-                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
-                                    </tns:applyChannel>
-                                    <tns:documentActions>
-                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
-                                      <tns:name>документ приобщается к пакету документов</tns:name>
-                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
-                                    </tns:documentActions>
-                                  </tns:actions>
-                                  <tns:actions>
-                                    <tns:applyChannel>
-                                      <tns:id>ebe1ce24-9f5e-11ea-b64e-001a4a16047d</tns:id>
-                                      <tns:name>в МФЦ</tns:name>
-                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
-                                    </tns:applyChannel>
-                                    <tns:documentActions>
-                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
-                                      <tns:name>документ приобщается к пакету документов</tns:name>
-                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
-                                    </tns:documentActions>
-                                  </tns:actions>
-                                  <tns:actions>
-                                    <tns:applyChannel>
-                                      <tns:id>ebe20ede-9f5e-11ea-b64e-001a4a16047d</tns:id>
-                                      <tns:name>в Органе власти</tns:name>
-                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
-                                    </tns:applyChannel>
-                                  </tns:actions>
-                                  <tns:admProcedures>
-                                    <tns:admProcedure>
-                                      <tns:id>0ae94758-7be3-1c2b-817b-f22e26580008</tns:id>
-                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
-                                    </tns:admProcedure>
-                                    <tns:unitsOfMeasurement>
-                                      <tns:id>0af49cff-7891-1508-8178-abeeccb5005e</tns:id>
-                                      <tns:dictionaryCode>units</tns:dictionaryCode>
-                                    </tns:unitsOfMeasurement>
-                                  </tns:admProcedures>
-                                  <tns:criteria>
-                                    <tns:criterion>
-                                      <tns:id>7be83e67-b1f4-11ea-aae6-ff4a53b285ba</tns:id>
-                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
-                                    </tns:criterion>
-                                    <tns:decisionType>
-                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
-                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
-                                    </tns:decisionType>
-                                    <tns:checkType>
-                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
-                                      <tns:name>Пользователь</tns:name>
-                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
-                                    </tns:checkType>
-                                    <tns:rejectionReason>
-                                      <tns:id>0ae9471a-8a75-1886-818a-83d3d567034c</tns:id>
-                                      <tns:dictionaryCode>rejectReason</tns:dictionaryCode>
-                                    </tns:rejectionReason>
-                                    <tns:isRejectionReason>true</tns:isRejectionReason>
-                                  </tns:criteria>
-                                </tns:documents>
-                                <tns:documents>
-                                  <tns:document>
                                     <tns:id>0ae952cf-7dc3-1b6c-817d-e8d0064d06f4</tns:id>
                                     <tns:dictionaryCode>document</tns:dictionaryCode>
                                   </tns:document>
@@ -8565,7 +9054,7 @@
                                   <tns:id>0ae952cf-7dc3-1b6c-817d-e7599c00067c</tns:id>
                                   <tns:dictionaryCode>documentCategory</tns:dictionaryCode>
                                 </tns:documentCategory>
-                                <tns:isRequiredOptional>false</tns:isRequiredOptional>
+                                <tns:isRequiredOptional>true</tns:isRequiredOptional>
                                 <tns:documents>
                                   <tns:document>
                                     <tns:id>040cc9be-af5e-4f18-8fbd-0acadf6967e6</tns:id>
@@ -8647,38 +9136,6 @@
                                       <tns:dictionaryCode>rejectReason</tns:dictionaryCode>
                                     </tns:rejectionReason>
                                     <tns:isRejectionReason>true</tns:isRejectionReason>
-                                  </tns:criteria>
-                                  <tns:criteria>
-                                    <tns:criterion>
-                                      <tns:id>0ae952cf-7dc3-1b6c-817d-e891ed2006da</tns:id>
-                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
-                                    </tns:criterion>
-                                    <tns:decisionType>
-                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
-                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
-                                    </tns:decisionType>
-                                    <tns:checkType>
-                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
-                                      <tns:name>Пользователь</tns:name>
-                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
-                                    </tns:checkType>
-                                    <tns:isRejectionReason>false</tns:isRejectionReason>
-                                  </tns:criteria>
-                                  <tns:criteria>
-                                    <tns:criterion>
-                                      <tns:id>7beb9715-b1f4-11ea-ab28-1fb4520bd4ee</tns:id>
-                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
-                                    </tns:criterion>
-                                    <tns:decisionType>
-                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
-                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
-                                    </tns:decisionType>
-                                    <tns:checkType>
-                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
-                                      <tns:name>Пользователь</tns:name>
-                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
-                                    </tns:checkType>
-                                    <tns:isRejectionReason>false</tns:isRejectionReason>
                                   </tns:criteria>
                                 </tns:documents>
                                 <tns:documents>
@@ -8969,23 +9426,7 @@
                                   </tns:attributeSettings>
                                   <tns:criteria>
                                     <tns:criterion>
-                                      <tns:id>7beaad69-b1f4-11ea-ab16-0fe0e81fde94</tns:id>
-                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
-                                    </tns:criterion>
-                                    <tns:decisionType>
-                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
-                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
-                                    </tns:decisionType>
-                                    <tns:checkType>
-                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
-                                      <tns:name>Пользователь</tns:name>
-                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
-                                    </tns:checkType>
-                                    <tns:isRejectionReason>false</tns:isRejectionReason>
-                                  </tns:criteria>
-                                  <tns:criteria>
-                                    <tns:criterion>
-                                      <tns:id>7beb9715-b1f4-11ea-ab28-1fb4520bd4ee</tns:id>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-00027aee000a</tns:id>
                                       <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
                                     </tns:criterion>
                                     <tns:decisionType>
@@ -9219,6 +9660,105 @@
                                       <tns:dictionaryCode>rejectReason</tns:dictionaryCode>
                                     </tns:rejectionReason>
                                     <tns:isRejectionReason>true</tns:isRejectionReason>
+                                  </tns:criteria>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:id>0ae952cf-7dc3-1b6c-817d-e8c3199a06ed</tns:id>
+                                    <tns:dictionaryCode>document</tns:dictionaryCode>
+                                  </tns:document>
+                                  <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe14120-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>посредством Единого портала</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe20ede-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в Органе власти</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe1ce24-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в МФЦ</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                  </tns:actions>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95271-7d99-1536-817d-9a6c65750042</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-131c70860012</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae9471b-7c9d-14b1-817c-dacc8a03004c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95295-7be3-1bfe-817b-f23865df002c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543d2ca-b53b-11ea-b7ba-8333c723e39f</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-23121e56001d</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-2311b83d001b</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543f9bd-b53b-11ea-b7be-efada6982a04</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae94758-7be3-1c2b-817b-f22e26580008</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543d2cc-b53b-11ea-b7bc-03af71501d4a</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:id>0ae94752-7f94-148e-817f-badf41cd17f2</tns:id>
+                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:id>0af404cd-790e-19e4-8179-17a2e6c70004</tns:id>
+                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
+                                    </tns:decisionType>
+                                    <tns:isRejectionReason>false</tns:isRejectionReason>
                                   </tns:criteria>
                                 </tns:documents>
                               </tns:documentsCategory>
@@ -9949,8 +10489,8 @@
                           <tns:answers>
                             <tns:id>609903</tns:id>
                             <tns:isInitialEvent>false</tns:isInitialEvent>
-                            <tns:questionsId>241934</tns:questionsId>
                             <tns:questionsId>241936</tns:questionsId>
+                            <tns:questionsId>273471</tns:questionsId>
                             <tns:additionalInformations>
                               <tns:infoType>
                                 <tns:id>0ae94755-7fdc-1c09-8180-2291900506f7</tns:id>
@@ -10124,6 +10664,839 @@
                                 </tns:requests>
                               </tns:smev3>
                             </tns:interdepartmentalRequest>
+                            <tns:documents>
+                              <tns:documentsCategory>
+                                <tns:documentCategory>
+                                  <tns:id>0ae952cf-7dc3-1b6c-817d-e7599c00067c</tns:id>
+                                  <tns:dictionaryCode>documentCategory</tns:dictionaryCode>
+                                </tns:documentCategory>
+                                <tns:isRequiredOptional>true</tns:isRequiredOptional>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:id>fb417687-f0aa-4b94-82ff-32f078f7f9d9</tns:id>
+                                    <tns:dictionaryCode>document</tns:dictionaryCode>
+                                  </tns:document>
+                                  <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe14120-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>посредством Единого портала</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe20ede-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в Органе власти</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe1ce24-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в МФЦ</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95271-7d99-1536-817d-9a6c65750042</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95295-7be3-1bfe-817b-f23865df002c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543f9bd-b53b-11ea-b7be-efada6982a04</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae94758-7be3-1c2b-817b-f22e26580008</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952cf-7dc3-1b6c-817d-e77eccf8067e</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae947fe-7dc3-1aab-817d-e77fb28905d6</tns:id>
+                                      <tns:attributeType>boolean</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae947fe-7dc3-1aab-817d-e7801da105d8</tns:id>
+                                      <tns:attributeType>boolean</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae947fe-7dc3-1aab-817d-e7806f9205da</tns:id>
+                                      <tns:attributeType>boolean</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952cf-7dc3-1b6c-817d-e780f4890680</tns:id>
+                                      <tns:attributeType>boolean</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae947fe-7dc3-1aab-817d-e781b22c05dc</tns:id>
+                                      <tns:attributeType>boolean</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-4220f6d70085</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-422283800087</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-422300940089</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-4223684b00ad</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-42240d06008b</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-4224dd4a008d</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-422578cc008f</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-4225e5630091</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-4226678700af</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-4227000c00b1</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-42275c9d00b3</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-4227f8d000b5</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-4228d1c50093</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-4229667a00b7</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-4229df640095</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-422a5ce100b9</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-422ad70b0097</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-422b1f0500bb</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-422bb04100bd</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952d8-813e-1dec-8181-422c38780099</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-422cccdf00bf</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:attributeSettings>
+                                    <tns:attribute>
+                                      <tns:id>0ae952b0-813e-1eb2-8181-422d430500c1</tns:id>
+                                      <tns:attributeType>string</tns:attributeType>
+                                      <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                    </tns:attribute>
+                                    <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                                  </tns:attributeSettings>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-00027aee000a</tns:id>
+                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
+                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
+                                    </tns:decisionType>
+                                    <tns:checkType>
+                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
+                                      <tns:name>Пользователь</tns:name>
+                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
+                                    </tns:checkType>
+                                    <tns:isRejectionReason>false</tns:isRejectionReason>
+                                  </tns:criteria>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:id>040cc9be-af5e-4f18-8fbd-0acadf6967e6</tns:id>
+                                    <tns:dictionaryCode>document</tns:dictionaryCode>
+                                  </tns:document>
+                                  <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe14120-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>посредством Единого портала</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe20ede-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в Органе власти</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe1ce24-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в МФЦ</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95271-7d99-1536-817d-9a6c65750042</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-131c70860012</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae9471b-7c9d-14b1-817c-dacc8a03004c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95295-7be3-1bfe-817b-f23865df002c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543d2ca-b53b-11ea-b7ba-8333c723e39f</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543f9bd-b53b-11ea-b7be-efada6982a04</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae94758-7be3-1c2b-817b-f22e26580008</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-00027aee000a</tns:id>
+                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
+                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
+                                    </tns:decisionType>
+                                    <tns:checkType>
+                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
+                                      <tns:name>Пользователь</tns:name>
+                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
+                                    </tns:checkType>
+                                    <tns:isRejectionReason>false</tns:isRejectionReason>
+                                  </tns:criteria>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:id>0ae952cf-7dc3-1b6c-817d-e8c3199a06ed</tns:id>
+                                    <tns:dictionaryCode>document</tns:dictionaryCode>
+                                  </tns:document>
+                                  <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe14120-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>посредством Единого портала</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe20ede-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в Органе власти</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe1ce24-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в МФЦ</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                  </tns:actions>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95271-7d99-1536-817d-9a6c65750042</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-131c70860012</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae9471b-7c9d-14b1-817c-dacc8a03004c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95295-7be3-1bfe-817b-f23865df002c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543d2ca-b53b-11ea-b7ba-8333c723e39f</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-23121e56001d</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-2311b83d001b</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543f9bd-b53b-11ea-b7be-efada6982a04</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae94758-7be3-1c2b-817b-f22e26580008</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543d2cc-b53b-11ea-b7bc-03af71501d4a</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:id>0ae94752-7f94-148e-817f-badf41cd17f2</tns:id>
+                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
+                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
+                                    </tns:decisionType>
+                                    <tns:checkType>
+                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
+                                      <tns:name>Пользователь</tns:name>
+                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
+                                    </tns:checkType>
+                                    <tns:isRejectionReason>false</tns:isRejectionReason>
+                                  </tns:criteria>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:id>31e8dc84-8836-430e-ac55-ee85cab47962</tns:id>
+                                    <tns:dictionaryCode>document</tns:dictionaryCode>
+                                  </tns:document>
+                                  <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe14120-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>посредством Единого портала</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe20ede-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в Органе власти</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe1ce24-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в МФЦ</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95271-7d99-1536-817d-9a6c65750042</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-131c70860012</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae9471b-7c9d-14b1-817c-dacc8a03004c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95295-7be3-1bfe-817b-f23865df002c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543d2ca-b53b-11ea-b7ba-8333c723e39f</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-23121e56001d</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-2311b83d001b</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543f9bd-b53b-11ea-b7be-efada6982a04</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae94758-7be3-1c2b-817b-f22e26580008</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543d2cc-b53b-11ea-b7bc-03af71501d4a</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-00027aee000a</tns:id>
+                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
+                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
+                                    </tns:decisionType>
+                                    <tns:checkType>
+                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
+                                      <tns:name>Пользователь</tns:name>
+                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
+                                    </tns:checkType>
+                                    <tns:isRejectionReason>false</tns:isRejectionReason>
+                                  </tns:criteria>
+                                </tns:documents>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:id>a4b3aa9b-13ea-48af-a3d0-2d094974d761</tns:id>
+                                    <tns:dictionaryCode>document</tns:dictionaryCode>
+                                  </tns:document>
+                                  <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe14120-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>посредством Единого портала</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe20ede-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в Органе власти</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe1ce24-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в МФЦ</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95271-7d99-1536-817d-9a6c65750042</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-131c70860012</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae9471b-7c9d-14b1-817c-dacc8a03004c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95295-7be3-1bfe-817b-f23865df002c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543d2ca-b53b-11ea-b7ba-8333c723e39f</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>b543f9bd-b53b-11ea-b7be-efada6982a04</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae94758-7be3-1c2b-817b-f22e26580008</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:id>0ae94731-86d9-18e5-8186-ea3ef0bc04f3</tns:id>
+                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
+                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
+                                    </tns:decisionType>
+                                    <tns:checkType>
+                                      <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
+                                      <tns:name>Пользователь</tns:name>
+                                      <tns:dictionaryCode>checkType</tns:dictionaryCode>
+                                    </tns:checkType>
+                                    <tns:isRejectionReason>false</tns:isRejectionReason>
+                                  </tns:criteria>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:id>0ae96483-82c6-13b6-8182-cbb6b66001c9</tns:id>
+                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
+                                    </tns:criterion>
+                                    <tns:isRejectionReason>false</tns:isRejectionReason>
+                                  </tns:criteria>
+                                </tns:documents>
+                              </tns:documentsCategory>
+                              <tns:documentsCategory>
+                                <tns:documentCategory>
+                                  <tns:id>635bcba0-02fe-47a1-aeed-71d7db737ce3</tns:id>
+                                  <tns:dictionaryCode>documentCategory</tns:dictionaryCode>
+                                </tns:documentCategory>
+                                <tns:isRequiredOptional>true</tns:isRequiredOptional>
+                                <tns:documents>
+                                  <tns:document>
+                                    <tns:id>0ae96483-8ea3-13ab-818f-52829b45283b</tns:id>
+                                    <tns:dictionaryCode>document</tns:dictionaryCode>
+                                  </tns:document>
+                                  <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe14120-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>посредством Единого портала</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe20ede-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в Органе власти</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:actions>
+                                    <tns:applyChannel>
+                                      <tns:id>ebe1ce24-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                                      <tns:name>в МФЦ</tns:name>
+                                      <tns:dictionaryCode>channels</tns:dictionaryCode>
+                                    </tns:applyChannel>
+                                    <tns:documentActions>
+                                      <tns:id>0af49cff-7891-1508-8178-acad021700c0</tns:id>
+                                      <tns:name>документ приобщается к пакету документов</tns:name>
+                                      <tns:dictionaryCode>documentAction</tns:dictionaryCode>
+                                    </tns:documentActions>
+                                  </tns:actions>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95271-7d99-1536-817d-9a6c65750042</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-131c70860012</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae95295-7be3-1bfe-817b-f23865df002c</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:admProcedures>
+                                    <tns:admProcedure>
+                                      <tns:id>0ae947a8-7ce6-1e85-817d-23121e56001d</tns:id>
+                                      <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                    </tns:admProcedure>
+                                  </tns:admProcedures>
+                                  <tns:criteria>
+                                    <tns:criterion>
+                                      <tns:id>0ae952b0-80f1-1cba-8180-f61e325f00c4</tns:id>
+                                      <tns:dictionaryCode>reasonForSuccessDecision</tns:dictionaryCode>
+                                    </tns:criterion>
+                                    <tns:decisionType>
+                                      <tns:id>0af404cd-790e-19e4-8179-17a2c56e0002</tns:id>
+                                      <tns:dictionaryCode>decisionType</tns:dictionaryCode>
+                                    </tns:decisionType>
+                                    <tns:isRejectionReason>false</tns:isRejectionReason>
+                                  </tns:criteria>
+                                </tns:documents>
+                              </tns:documentsCategory>
+                            </tns:documents>
                           </tns:answers>
                           <tns:answers>
                             <tns:id>609904</tns:id>
@@ -11853,6 +13226,42 @@
                                 </tns:requests>
                               </tns:smev3>
                             </tns:interdepartmentalRequest>
+                          </tns:answers>
+                          <tns:answers>
+                            <tns:id>686829</tns:id>
+                            <tns:isInitialEvent>false</tns:isInitialEvent>
+                            <tns:codeAnswer />
+                            <tns:questionsId>273471</tns:questionsId>
+                            <tns:questionsId>241935</tns:questionsId>
+                          </tns:answers>
+                          <tns:answers>
+                            <tns:id>686830</tns:id>
+                            <tns:isInitialEvent>false</tns:isInitialEvent>
+                            <tns:codeAnswer />
+                            <tns:questionsId>273471</tns:questionsId>
+                            <tns:questionsId>241935</tns:questionsId>
+                            <tns:additionalInformations>
+                              <tns:infoType>
+                                <tns:id>0ae947d5-8fde-1b4c-8190-0123f2c00a1b</tns:id>
+                                <tns:dictionaryCode>infoTypes</tns:dictionaryCode>
+                              </tns:infoType>
+                              <tns:isRequiredOptional>false</tns:isRequiredOptional>
+                              <tns:isAddInfoInProcess>false</tns:isAddInfoInProcess>
+                              <tns:isNotStructured>false</tns:isNotStructured>
+                              <tns:admProcedures>
+                                <tns:admProcedure>
+                                  <tns:id>0ae95295-7be3-1bfe-817b-f23865df002c</tns:id>
+                                  <tns:dictionaryCode>admProcedures</tns:dictionaryCode>
+                                </tns:admProcedure>
+                              </tns:admProcedures>
+                              <tns:attributeSettings>
+                                <tns:attribute>
+                                  <tns:id>0ae96438-8fde-1ab2-8190-01214222087d</tns:id>
+                                  <tns:dictionaryCode>additionalInformation</tns:dictionaryCode>
+                                </tns:attribute>
+                                <tns:isDecisionMaking>true</tns:isDecisionMaking>
+                              </tns:attributeSettings>
+                            </tns:additionalInformations>
                           </tns:answers>
                         </tns:profilingSettings>
                       </tns:profiling>
@@ -17892,16 +19301,16 @@
             </ns2:MessagePrimaryContent>
           </SenderProvidedResponseData>
           <ns2:MessageMetadata xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2">
-            <ns2:MessageId>57a0a505-b1fe-11ef-8a0f-3a09311888cb</ns2:MessageId>
+            <ns2:MessageId>99628ca8-b87d-11ef-b8be-4656814f85ff</ns2:MessageId>
             <ns2:MessageType>RESPONSE</ns2:MessageType>
             <ns2:Sender>
               <ns2:Mnemonic>MNSV50</ns2:Mnemonic>
             </ns2:Sender>
-            <ns2:SendingTimestamp>2024-12-04T08:12:22.396+03:00</ns2:SendingTimestamp>
+            <ns2:SendingTimestamp>2024-12-12T14:38:25.779+03:00</ns2:SendingTimestamp>
             <ns2:Recipient>
               <ns2:Mnemonic>U798301</ns2:Mnemonic>
             </ns2:Recipient>
-            <ns2:DeliveryTimestamp>2024-12-04T08:14:00.920+03:00</ns2:DeliveryTimestamp>
+            <ns2:DeliveryTimestamp>2024-12-12T14:39:36.977+03:00</ns2:DeliveryTimestamp>
             <ns2:Status>messageIsDelivered</ns2:Status>
           </ns2:MessageMetadata>
         </ns2:Response>
@@ -17916,10 +19325,10 @@
                   <ds:Transform Algorithm="urn://smev-gov-ru/xmldsig/transform" />
                 </ds:Transforms>
                 <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256" />
-                <ds:DigestValue>dmsuno85QEhDnGypzG+MPZBq8HzLmZg0A+3vBlSz4Zc=</ds:DigestValue>
+                <ds:DigestValue>0kZ91XoDoF3anMq53rpE+zqcYY5rsj+xc1Mc4NNqxUQ=</ds:DigestValue>
               </ds:Reference>
             </ds:SignedInfo>
-            <ds:SignatureValue>OdqXa3HkF66k8wAyh1Yl3tgNjkFZUqNlEDVU1MzfRpAmQ7sYLYCM6fNAB3IFF2V/uJVwVFtB36TVMVQE1BccFg==</ds:SignatureValue>
+            <ds:SignatureValue>MUFCFovWDbqsrlnsD3hhG2ncjzcHGTgfG7btCYiL8mjW2uSqm0H8TGL8n+BW6RXYn2e+0VcR7DPT+0IMxZUTIA==</ds:SignatureValue>
             <ds:KeyInfo>
               <ds:X509Data>
                 <ds:X509Certificate>MIIJ9TCCCaKgAwIBAgIRAOvXyZa4LCnOmIICqnI5smwwCgYIKoUDBwEBAwIwggFXMSAwHgYJKoZIhvcNAQkBFhF1Y19ma0Byb3NrYXpuYS5ydTEYMBYGA1UECAwPNzcg0JzQvtGB0LrQstCwMRUwEwYFKoUDZAQSCjc3MTA1Njg3NjAxGDAWBgUqhQNkARINMTA0Nzc5NzAxOTgzMDFgMF4GA1UECQxX0JHQvtC70YzRiNC+0Lkg0JfQu9Cw0YLQvtGD0YHRgtC40L3RgdC60LjQuSDQv9C10YDQtdGD0LvQvtC6LCDQtC4gNiwg0YHRgtGA0L7QtdC90LjQtSAxMRkwFwYDVQQHDBDQsy4g0JzQvtGB0LrQstCwMQswCQYDVQQGEwJSVTEuMCwGA1UECgwl0JrQsNC30L3QsNGH0LXQudGB0YLQstC+INCg0L7RgdGB0LjQuDEuMCwGA1UEAwwl0JrQsNC30L3QsNGH0LXQudGB0YLQstC+INCg0L7RgdGB0LjQuDAeFw0yMzExMjcwNjQ1MDBaFw0yNTAyMTkwNjQ1MDBaMIICsDELMAkGA1UEBhMCUlUxGTAXBgNVBAgMENCzLiDQnNC+0YHQutCy0LAxNzA1BgNVBAkMLtCf0YDQtdGB0L3QtdC90YHQutCw0Y8g0L3QsNCxLiDQtC4xMCwg0YHRgtGALjIxFTATBgNVBAcMDNCc0L7RgdC60LLQsDGBgTB/BgNVBAsMeNCU0LXQv9Cw0YDRgtCw0LzQtdC90YIg0YDQsNC30LLQuNGC0LjRjyDQuNC90YTRgNCw0YHRgtGA0YPQutGC0YPRgNGLINGN0LvQtdC60YLRgNC+0L3QvdC+0LPQviDQv9GA0LDQstC40YLQtdC70YzRgdGC0LLQsDGBqDCBpQYDVQQKDIGd0JzQmNCd0JjQodCi0JXQoNCh0KLQktCeINCm0JjQpNCg0J7QktCe0JPQniDQoNCQ0JfQktCY0KLQmNCvLCDQodCS0K/Ql9CYINCYINCc0JDQodCh0J7QktCr0KUg0JrQntCc0JzQo9Cd0JjQmtCQ0KbQmNCZINCg0J7QodCh0JjQmdCh0JrQntCZINCk0JXQlNCV0KDQkNCm0JjQmDEYMBYGBSqFA2QBEg0xMDQ3NzAyMDI2NzAxMRUwEwYFKoUDZAQSCjc3MTA0NzQzNzUxKzApBgkqhkiG9w0BCQEWHGkucGFya2hvbWVua29AZGlnaXRhbC5nb3YucnUxgagwgaUGA1UEAwyBndCc0JjQndCY0KHQotCV0KDQodCi0JLQniDQptCY0KTQoNCe0JLQntCT0J4g0KDQkNCX0JLQmNCi0JjQrywg0KHQktCv0JfQmCDQmCDQnNCQ0KHQodCe0JLQq9ClINCa0J7QnNCc0KPQndCY0JrQkNCm0JjQmSDQoNCe0KHQodCY0JnQodCa0J7QmSDQpNCV0JTQldCg0JDQptCY0JgwZjAfBggqhQMHAQEBATATBgcqhQMCAiQABggqhQMHAQECAgNDAARArAkFWJwJLPlBv37bs+kcdRbcTX1iuDBy9YTWocV6GzV8UcDfziE3DW2GnUkMkwl/QS7UV46jTh/bf4Tcq7ieh6OCBOMwggTfMA4GA1UdDwEB/wQEAwID+DBFBgNVHSUEPjA8BggrBgEFBQcDAQYIKwYBBQUHAwIGCCsGAQUFBwMDBggqhQMCAQYIBQYIKoUDA4F7AQEGCCqFAwOBewUBMCcGA1UdIAQgMB4wCAYGKoUDZHEBMAgGBiqFA2RxAjAIBgYqhQNkcQMwDAYFKoUDZHIEAwIBATAtBgUqhQNkbwQkDCLQmtGA0LjQv9GC0L7Qn9GA0L4gQ1NQICg1LjAuMTI5MjIpMIIBowYFKoUDZHAEggGYMIIBlAyBh9Cf0YDQvtCz0YDQsNC80LzQvdC+LdCw0L/Qv9Cw0YDQsNGC0L3Ri9C5INC60L7QvNC/0LvQtdC60YEgVmlQTmV0IFBLSSBTZXJ2aWNlICjQvdCwINCw0L/Qv9Cw0YDQsNGC0L3QvtC5INC/0LvQsNGC0YTQvtGA0LzQtSBIU00gMjAwMFEyKQxo0J/RgNC+0LPRgNCw0LzQvNC90L4t0LDQv9C/0LDRgNCw0YLQvdGL0Lkg0LrQvtC80L/Qu9C10LrRgSDCq9Cu0L3QuNGB0LXRgNGCLdCT0J7QodCiwrsuINCS0LXRgNGB0LjRjyA0LjAMTtCh0LXRgNGC0LjRhNC40LrQsNGCINGB0L7QvtGC0LLQtdGC0YHRgtCy0LjRjyDihJbQodCkLzEyNC0zNzQzINC+0YIgMDQuMDkuMjAxOQxO0JfQsNC60LvRjtGH0LXQvdC40LUg0L3QsCDRgdGA0LXQtNGB0YLQstC+INCj0KYg4oSWMTQ5LzcvNi8yMTMg0L7RgiAzMC4wMy4yMDIzMGYGA1UdHwRfMF0wLqAsoCqGKGh0dHA6Ly9jcmwucm9za2F6bmEucnUvY3JsL3VjZmtfMjAyMy5jcmwwK6ApoCeGJWh0dHA6Ly9jcmwuZmsubG9jYWwvY3JsL3VjZmtfMjAyMy5jcmwwdwYIKwYBBQUHAQEEazBpMDQGCCsGAQUFBzAChihodHRwOi8vY3JsLnJvc2them5hLnJ1L2NybC91Y2ZrXzIwMjMuY3J0MDEGCCsGAQUFBzAChiVodHRwOi8vY3JsLmZrLmxvY2FsL2NybC91Y2ZrXzIwMjMuY3J0MB0GA1UdDgQWBBTrzwr/pFAtGY1rZ3eRsGbFtuN6aDCCAXcGA1UdIwSCAW4wggFqgBSnC5Uob5/kS4pRgLKFH4lK/OfwnKGCAUOkggE/MIIBOzEhMB8GCSqGSIb3DQEJARYSZGl0QGRpZ2l0YWwuZ292LnJ1MQswCQYDVQQGEwJSVTEYMBYGA1UECAwPNzcg0JzQvtGB0LrQstCwMRkwFwYDVQQHDBDQsy4g0JzQvtGB0LrQstCwMVMwUQYDVQQJDErQn9GA0LXRgdC90LXQvdGB0LrQsNGPINC90LDQsdC10YDQtdC20L3QsNGPLCDQtNC+0LwgMTAsINGB0YLRgNC+0LXQvdC40LUgMjEmMCQGA1UECgwd0JzQuNC90YbQuNGE0YDRiyDQoNC+0YHRgdC40LgxGDAWBgUqhQNkARINMTA0NzcwMjAyNjcwMTEVMBMGBSqFA2QEEgo3NzEwNDc0Mzc1MSYwJAYDVQQDDB3QnNC40L3RhtC40YTRgNGLINCg0L7RgdGB0LjQuIILAPCp4okAAAAAB54wCgYIKoUDBwEBAwIDQQDUY9uHCenKGz6xTv54ZBEX6wbSYsF2dz1ZbgiXpUfe2qyhylMhQphlaU7Lr3yTZuC1UqWfsma9FvRjQrBhHQKv</ds:X509Certificate>

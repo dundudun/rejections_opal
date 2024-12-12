@@ -136,13 +136,23 @@ $$
 declare
 	rec record;
 	key_type int8;
+	rejectionsInDB text[];
+	rejectionInDB text;
+	rejections text[];
+	rejection text;
+	exist bool;
 begin
+	raise info 'Beginning -----------------------------------';
 	for rec in (select scheme from regadm.m_projects where scheme = 'kostgo') loop
 		perform set_config('search_path', rec.scheme, true);
 		raise info '%', rec.scheme;
 
+		rejections := '{}';
+
 		select key into key_type from d_ref_dependent_type where full_name like 'DocRefRejectReasonType';
 		raise info 'key of DocRefRejectReasonType = %', key_type;
+
+		select array_agg(code_kcr) into rejectionsInDB from d_ref_dependents where code_kcr is not null;
 `
 
 	fs.WalkDir(fileSystem, "reglaments", func(path string, d fs.DirEntry, err error) error {
@@ -263,7 +273,7 @@ begin
 				} else {
 					text += "\n" + indent
 				}
-				text += fmt.Sprintf("insert into d_ref_dependents (alias, code_kcr, dependent_type, full_name, name, is_draft, sys_status) values ('Opal%sRejReason%d', '%s', key_type, '%s','%s', 0, 0);",
+				text += fmt.Sprintf("rejections := array_append(rejections, 'insert into d_ref_dependents (alias, code_kcr, full_name, name, is_draft, sys_status) values (''Opal%sRejReason%d'', ''%s'', ''%s'',''%s'', 0, 0);');",
 					service, i, rejectId, rejectName, rejectName)
 			}
 			text += "\n"
@@ -285,7 +295,7 @@ begin
 				} else {
 					text += "\n" + indent
 				}
-				text += fmt.Sprintf("insert into d_ref_dependents (alias, code_kcr, dependent_type, full_name, name, is_draft, sys_status) values ('Opal%sRejMeaning%d', '%s', key_type, '%s','%s', 0, 0);",
+				text += fmt.Sprintf("rejections := array_append(rejections, 'insert into d_ref_dependents (alias, code_kcr, full_name, name, is_draft, sys_status) values (''Opal%sRejMeaning%d'', ''%s'', ''%s'', ''%s'', 0, 0);');",
 					service, i, negMeanId, obj.NegativeMeaning, obj.NegativeMeaning)
 			}
 		}
@@ -293,13 +303,31 @@ begin
 
 		return nil
 	})
-	text += "\n" + `    end loop;
+	text += "\n" + `
+		for rejection in (select unnest(rejections)) loop
+			exist := false;
+			for rejectionInDB in (select unnest(rejectionsInDB)) loop
+				if rejection ilike '%'||rejectionInDB||'%' then
+					exist := true;
+					raise info 'already exist same code_kcr: %', rejection;
+					exit;
+				end if;
+			end loop;
+			
+			if exist != true then
+				--execute rejection;
+				raise info '%', rejection;
+			end if;
+		end loop;
+
+		update d_ref_dependents set dependent_type=key_type where code_kcr is not null;
+	end loop;
 end;
 $$;`
 
 	text += "\n\n\n" + `
 --запрос с фильтром для проверки созданных отказов на схеме
-select * from <scheme>.d_ref_dependents where alias like "Opal%";
+select * from <scheme>.d_ref_dependents where alias like 'Opal%' and alias not like 'OpalRejection';
 
 
 --чистка бд от созданных для опала отказов
@@ -313,7 +341,7 @@ begin
 		perform set_config('search_path', rec.scheme, true);
 		raise info '%', rec.scheme;
 
-		delete from d_ref_dependents where alias like "Opal%";
+		delete from d_ref_dependents where alias like 'Opal%' and alias not like 'OpalRejection';
 	end loop;
 end;
 $$;`

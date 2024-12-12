@@ -1,0 +1,3 @@
+*.zip
+log
+script_to_add_rejection_reasons_for_opal.sql

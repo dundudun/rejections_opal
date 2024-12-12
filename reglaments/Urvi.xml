@@ -3,10 +3,10 @@
     <ns2:GetResponseResponse xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.2" xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2" xmlns:ns3="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/faults/1.2">
       <ns2:ResponseMessage>
         <ns2:Response xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2" Id="SIGNED_BY_SMEV">
-          <ns2:OriginalMessageId>f7e25605-abfd-11ef-8596-0242ac647902</ns2:OriginalMessageId>
+          <ns2:OriginalMessageId>2d2024c0-b87d-11ef-8064-0242ac641802</ns2:OriginalMessageId>
           <SenderProvidedResponseData xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.2" xmlns:ns3="http://www.w3.org/2004/08/xop/include" Id="SIGNED_BY_CONSUMER">
-            <MessageID>55b2ab29-abfe-11ef-8a0f-3a09311888cb</MessageID>
-            <To>eyJzaWQiOjE3MzQ3ODk3OCwibWlkIjoiZjdlMjU2MDUtYWJmZC0xMWVmLTg1OTYtMDI0MmFjNjQ3OTAyIiwiZW9sIjowLCJzbGMiOiJyb3N0ZWxla29tLnJ1X0tDUl8xLjAuMV9LQ1JSZXF1ZXN0IiwibW5tIjoiVTc5ODMwMSIsIm5zIjoidXJuOi8vcm9zdGVsZWtvbS5ydS9LQ1IvMS4wLjYiLCJyZW9sIjowLCJvcmlkIjpudWxsfQ==</To>
+            <MessageID>9a1c3fba-b87d-11ef-b8be-4656814f85ff</MessageID>
+            <To>eyJzaWQiOjE3MzQ3ODk3OCwibWlkIjoiMmQyMDI0YzAtYjg3ZC0xMWVmLTgwNjQtMDI0MmFjNjQxODAyIiwiZW9sIjowLCJzbGMiOiJyb3N0ZWxla29tLnJ1X0tDUl8xLjAuMV9LQ1JSZXF1ZXN0IiwibW5tIjoiVTc5ODMwMSIsIm5zIjoidXJuOi8vcm9zdGVsZWtvbS5ydS9LQ1IvMS4wLjYiLCJyZW9sIjowLCJvcmlkIjpudWxsfQ==</To>
             <ns2:MessagePrimaryContent>
               <tns:KCRResponse xmlns:tns="urn://rostelekom.ru/KCR/1.0.6">
                 <tns:kcrService>
@@ -1890,13 +1890,6 @@
                               <tns:smev3>
                                 <tns:requests>
                                   <tns:request>
-                                    <tns:name>Вид сведений Универсальный электронный медицинский документ РЭМД</tns:name>
-                                  </tns:request>
-                                </tns:requests>
-                              </tns:smev3>
-                              <tns:smev3>
-                                <tns:requests>
-                                  <tns:request>
                                     <tns:name>Проверка действительности паспорта</tns:name>
                                   </tns:request>
                                   <tns:reasonService>
@@ -2537,7 +2530,7 @@
                             <tns:name>Выдача результата предоставления услуги</tns:name>
                           </tns:name>
                           <tns:innerStatus>
-                            <tns:name>Услуга оказана</tns:name>
+                            <tns:name>Направлен результат</tns:name>
                           </tns:innerStatus>
                           <tns:isAffectedByAdmAction>true</tns:isAffectedByAdmAction>
                           <tns:epguStatus>
@@ -2553,38 +2546,8 @@
                           <tns:timeFrameUnit>
                             <tns:name>Рабочий день</tns:name>
                           </tns:timeFrameUnit>
-                          <tns:isServiceTimeFrameAffected>true</tns:isServiceTimeFrameAffected>
+                          <tns:isServiceTimeFrameAffected>false</tns:isServiceTimeFrameAffected>
                           <tns:timeMvzQuantity>0</tns:timeMvzQuantity>
-                          <tns:departmentSystems>
-                            <tns:name>государственная информационная система обеспечения градостроительной деятельности Костромской области </tns:name>
-                          </tns:departmentSystems>
-                        </tns:administrativeActions>
-                        <tns:administrativeActions>
-                          <tns:name>
-                            <tns:name>Выдача результата предоставления услуги</tns:name>
-                          </tns:name>
-                          <tns:innerStatus>
-                            <tns:name>Услуга оказана</tns:name>
-                          </tns:innerStatus>
-                          <tns:isAffectedByAdmAction>true</tns:isAffectedByAdmAction>
-                          <tns:epguStatus>
-                            <tns:name>Услуга оказана</tns:name>
-                          </tns:epguStatus>
-                          <tns:epguStatusComment />
-                          <tns:performedBy>
-                            <tns:name>Пользователь</tns:name>
-                          </tns:performedBy>
-                          <tns:isAvailableInPgs>false</tns:isAvailableInPgs>
-                          <tns:isSuspensionService>false</tns:isSuspensionService>
-                          <tns:timeFrameQuantity>1</tns:timeFrameQuantity>
-                          <tns:timeFrameUnit>
-                            <tns:name>Рабочий день</tns:name>
-                          </tns:timeFrameUnit>
-                          <tns:isServiceTimeFrameAffected>true</tns:isServiceTimeFrameAffected>
-                          <tns:timeMvzQuantity>0</tns:timeMvzQuantity>
-                          <tns:departmentSystems>
-                            <tns:name>государственная информационная система обеспечения градостроительной деятельности Костромской области </tns:name>
-                          </tns:departmentSystems>
                         </tns:administrativeActions>
                         <tns:administrativeActions>
                           <tns:name>
@@ -2615,7 +2578,7 @@
                             <tns:name>Выдача результата предоставления услуги</tns:name>
                           </tns:name>
                           <tns:innerStatus>
-                            <tns:name>Услуга оказана</tns:name>
+                            <tns:name>Направлен результат</tns:name>
                           </tns:innerStatus>
                           <tns:isAffectedByAdmAction>true</tns:isAffectedByAdmAction>
                           <tns:epguStatus>
@@ -2631,11 +2594,32 @@
                           <tns:timeFrameUnit>
                             <tns:name>Рабочий день</tns:name>
                           </tns:timeFrameUnit>
-                          <tns:isServiceTimeFrameAffected>true</tns:isServiceTimeFrameAffected>
+                          <tns:isServiceTimeFrameAffected>false</tns:isServiceTimeFrameAffected>
                           <tns:timeMvzQuantity>0</tns:timeMvzQuantity>
-                          <tns:departmentSystems>
-                            <tns:name>государственная информационная система обеспечения градостроительной деятельности Костромской области </tns:name>
-                          </tns:departmentSystems>
+                        </tns:administrativeActions>
+                        <tns:administrativeActions>
+                          <tns:name>
+                            <tns:name>Выдача результата предоставления услуги</tns:name>
+                          </tns:name>
+                          <tns:innerStatus>
+                            <tns:name>Направлен результат</tns:name>
+                          </tns:innerStatus>
+                          <tns:isAffectedByAdmAction>true</tns:isAffectedByAdmAction>
+                          <tns:epguStatus>
+                            <tns:name>Услуга оказана</tns:name>
+                          </tns:epguStatus>
+                          <tns:epguStatusComment />
+                          <tns:performedBy>
+                            <tns:name>Пользователь</tns:name>
+                          </tns:performedBy>
+                          <tns:isAvailableInPgs>false</tns:isAvailableInPgs>
+                          <tns:isSuspensionService>false</tns:isSuspensionService>
+                          <tns:timeFrameQuantity>1</tns:timeFrameQuantity>
+                          <tns:timeFrameUnit>
+                            <tns:name>Рабочий день</tns:name>
+                          </tns:timeFrameUnit>
+                          <tns:isServiceTimeFrameAffected>false</tns:isServiceTimeFrameAffected>
+                          <tns:timeMvzQuantity>0</tns:timeMvzQuantity>
                         </tns:administrativeActions>
                         <tns:administrativeActions>
                           <tns:name>
@@ -5661,18 +5645,6 @@
                               <tns:smev3>
                                 <tns:requests>
                                   <tns:request>
-                                    <tns:id>0ae94752-7f94-148e-817f-b17d78870ba7</tns:id>
-                                    <tns:idRequest>VS01585002MZRV01</tns:idRequest>
-                                    <tns:versionService>1.0.3</tns:versionService>
-                                    <tns:linkService>https://smev3.gosuslugi.ru/portal/inquirytype_one.jsp?id=143521&amp;zone=fed&amp;page=1&amp;dTest=false</tns:linkService>
-                                    <tns:namespaceService>http://remd.gateway.pcc.ru/universal-data-exchange/1.0.3</tns:namespaceService>
-                                    <tns:dictionaryCode>SMEV_INFO_TYPES</tns:dictionaryCode>
-                                  </tns:request>
-                                </tns:requests>
-                              </tns:smev3>
-                              <tns:smev3>
-                                <tns:requests>
-                                  <tns:request>
                                     <tns:id>0ae952a6-8203-1fef-8182-370a7dbc065c</tns:id>
                                     <tns:idRequest>VS02363001MVDR23</tns:idRequest>
                                     <tns:versionService>1.0.0</tns:versionService>
@@ -6575,48 +6547,17 @@
                           </tns:departmentSystems>
                         </tns:administrativeActions>
                         <tns:administrativeActions>
-                          <tns:id>Activity_a0a417da-b511-4458-ab48-3bf27af2fd8b</tns:id>
-                          <tns:idProcedures>1965560</tns:idProcedures>
-                          <tns:laneId>Participant_821ded8f-be46-41b3-8728-cd9f2ef36f49</tns:laneId>
-                          <tns:exits>Event_d6a97055-49ee-4c74-9c3a-884caf1cf49c</tns:exits>
-                          <tns:enters>Gateway_03femcz</tns:enters>
-                          <tns:name>
-                            <tns:id>a50d5da0-b546-11ea-b820-63243a8312ed</tns:id>
-                            <tns:dictionaryCode>admActions</tns:dictionaryCode>
-                          </tns:name>
-                          <tns:innerStatus>
-                            <tns:id>ebe4188c-9f5e-11ea-b64e-001a4a16047d</tns:id>
-                            <tns:dictionaryCode>StatusInternal</tns:dictionaryCode>
-                          </tns:innerStatus>
-                          <tns:epguStatus>
-                            <tns:id>ebe3c058-9f5e-11ea-b64e-001a4a16047d</tns:id>
-                            <tns:dictionaryCode>StatusEPGU</tns:dictionaryCode>
-                          </tns:epguStatus>
-                          <tns:performedBy>
-                            <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
-                            <tns:dictionaryCode>checkType</tns:dictionaryCode>
-                          </tns:performedBy>
-                          <tns:timeFrameUnit>
-                            <tns:id>0af49cff-7891-1508-8178-abeeccb5005e</tns:id>
-                            <tns:dictionaryCode>units</tns:dictionaryCode>
-                          </tns:timeFrameUnit>
-                          <tns:departmentSystems>
-                            <tns:id>0ae96483-8ea3-13ab-818e-ae39da20031e</tns:id>
-                            <tns:dictionaryCode>departmentSystems</tns:dictionaryCode>
-                          </tns:departmentSystems>
-                        </tns:administrativeActions>
-                        <tns:administrativeActions>
-                          <tns:id>Activity_11084845-9bc7-4a39-af0b-a0d03c474fd9</tns:id>
+                          <tns:id>Activity_0dq5gxn</tns:id>
                           <tns:idProcedures>1965560</tns:idProcedures>
                           <tns:laneId>Participant_774784d5-c816-41e5-9f63-942da4faed2a</tns:laneId>
-                          <tns:exits>Event_779a9f89-2c2f-4880-b782-301897d8eeef</tns:exits>
-                          <tns:enters>Gateway_03femcz</tns:enters>
+                          <tns:exits>Event_0ekpj4f</tns:exits>
+                          <tns:enters>Gateway_0icj4j0</tns:enters>
                           <tns:name>
                             <tns:id>a50d5da0-b546-11ea-b820-63243a8312ed</tns:id>
                             <tns:dictionaryCode>admActions</tns:dictionaryCode>
                           </tns:name>
                           <tns:innerStatus>
-                            <tns:id>ebe4188c-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                            <tns:id>ebe4421c-9f5e-11ea-b64e-001a4a16047d</tns:id>
                             <tns:dictionaryCode>StatusInternal</tns:dictionaryCode>
                           </tns:innerStatus>
                           <tns:epguStatus>
@@ -6631,10 +6572,6 @@
                             <tns:id>0af49cff-7891-1508-8178-abeeccb5005e</tns:id>
                             <tns:dictionaryCode>units</tns:dictionaryCode>
                           </tns:timeFrameUnit>
-                          <tns:departmentSystems>
-                            <tns:id>0ae96483-8ea3-13ab-818e-ae39da20031e</tns:id>
-                            <tns:dictionaryCode>departmentSystems</tns:dictionaryCode>
-                          </tns:departmentSystems>
                         </tns:administrativeActions>
                         <tns:administrativeActions>
                           <tns:id>Activity_05aow3u</tns:id>
@@ -6664,17 +6601,17 @@
                           </tns:timeFrameUnit>
                         </tns:administrativeActions>
                         <tns:administrativeActions>
-                          <tns:id>Activity_26acbca2-f14c-41bd-992b-60f70360d038</tns:id>
+                          <tns:id>Activity_0bk9hq4</tns:id>
                           <tns:idProcedures>1965560</tns:idProcedures>
                           <tns:laneId>Participant_e4e2815d-edd1-44f5-a9ce-19068058d343</tns:laneId>
-                          <tns:exits>Event_e5289a08-18b9-48ea-91b6-a122306cfa2e</tns:exits>
-                          <tns:enters>Gateway_03femcz</tns:enters>
+                          <tns:exits>Event_1oh5otu</tns:exits>
+                          <tns:enters>Gateway_0icj4j0</tns:enters>
                           <tns:name>
                             <tns:id>a50d5da0-b546-11ea-b820-63243a8312ed</tns:id>
                             <tns:dictionaryCode>admActions</tns:dictionaryCode>
                           </tns:name>
                           <tns:innerStatus>
-                            <tns:id>ebe4188c-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                            <tns:id>ebe4421c-9f5e-11ea-b64e-001a4a16047d</tns:id>
                             <tns:dictionaryCode>StatusInternal</tns:dictionaryCode>
                           </tns:innerStatus>
                           <tns:epguStatus>
@@ -6689,16 +6626,39 @@
                             <tns:id>0af49cff-7891-1508-8178-abeeccb5005e</tns:id>
                             <tns:dictionaryCode>units</tns:dictionaryCode>
                           </tns:timeFrameUnit>
-                          <tns:departmentSystems>
-                            <tns:id>0ae96483-8ea3-13ab-818e-ae39da20031e</tns:id>
-                            <tns:dictionaryCode>departmentSystems</tns:dictionaryCode>
-                          </tns:departmentSystems>
+                        </tns:administrativeActions>
+                        <tns:administrativeActions>
+                          <tns:id>Activity_05bywo4</tns:id>
+                          <tns:idProcedures>1965560</tns:idProcedures>
+                          <tns:laneId>Participant_821ded8f-be46-41b3-8728-cd9f2ef36f49</tns:laneId>
+                          <tns:exits>Event_1g3c61p</tns:exits>
+                          <tns:enters>Gateway_0icj4j0</tns:enters>
+                          <tns:name>
+                            <tns:id>a50d5da0-b546-11ea-b820-63243a8312ed</tns:id>
+                            <tns:dictionaryCode>admActions</tns:dictionaryCode>
+                          </tns:name>
+                          <tns:innerStatus>
+                            <tns:id>ebe4421c-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                            <tns:dictionaryCode>StatusInternal</tns:dictionaryCode>
+                          </tns:innerStatus>
+                          <tns:epguStatus>
+                            <tns:id>ebe3c058-9f5e-11ea-b64e-001a4a16047d</tns:id>
+                            <tns:dictionaryCode>StatusEPGU</tns:dictionaryCode>
+                          </tns:epguStatus>
+                          <tns:performedBy>
+                            <tns:id>0af40510-7a63-13aa-817a-66c6544d0006</tns:id>
+                            <tns:dictionaryCode>checkType</tns:dictionaryCode>
+                          </tns:performedBy>
+                          <tns:timeFrameUnit>
+                            <tns:id>0af49cff-7891-1508-8178-abeeccb5005e</tns:id>
+                            <tns:dictionaryCode>units</tns:dictionaryCode>
+                          </tns:timeFrameUnit>
                         </tns:administrativeActions>
                         <tns:administrativeActions>
                           <tns:id>Activity_0qepsca</tns:id>
                           <tns:idProcedures>1965561</tns:idProcedures>
                           <tns:laneId>Participant_e4e2815d-edd1-44f5-a9ce-19068058d343</tns:laneId>
-                          <tns:exits>Gateway_03femcz</tns:exits>
+                          <tns:exits>Gateway_0icj4j0</tns:exits>
                           <tns:enters>Activity_1oekoll</tns:enters>
                           <tns:enters>Activity_1dqryxr</tns:enters>
                           <tns:name>
@@ -7013,24 +6973,10 @@
                           <tns:exits>Activity_3f9f14d0-ffbd-4c36-a02c-324257ade28c</tns:exits>
                         </tns:hookup>
                         <tns:hookup>
-                          <tns:id>Event_d6a97055-49ee-4c74-9c3a-884caf1cf49c</tns:id>
-                          <tns:type>end</tns:type>
-                          <tns:laneId>Participant_821ded8f-be46-41b3-8728-cd9f2ef36f49</tns:laneId>
-                          <tns:gatewayQuestion>null</tns:gatewayQuestion>
-                          <tns:enters>Activity_a0a417da-b511-4458-ab48-3bf27af2fd8b</tns:enters>
-                        </tns:hookup>
-                        <tns:hookup>
                           <tns:id>Event_b091b9d9-8572-431b-875a-4ec348efcc60</tns:id>
                           <tns:type>end</tns:type>
                           <tns:laneId>Participant_e4e2815d-edd1-44f5-a9ce-19068058d343</tns:laneId>
                           <tns:gatewayQuestion>null</tns:gatewayQuestion>
-                        </tns:hookup>
-                        <tns:hookup>
-                          <tns:id>Event_779a9f89-2c2f-4880-b782-301897d8eeef</tns:id>
-                          <tns:type>end</tns:type>
-                          <tns:laneId>Participant_774784d5-c816-41e5-9f63-942da4faed2a</tns:laneId>
-                          <tns:gatewayQuestion>null</tns:gatewayQuestion>
-                          <tns:enters>Activity_11084845-9bc7-4a39-af0b-a0d03c474fd9</tns:enters>
                         </tns:hookup>
                         <tns:hookup>
                           <tns:id>Event_a3cb1590-d6dd-4753-b96e-bd82e2f3c1f3</tns:id>
@@ -7038,25 +6984,6 @@
                           <tns:laneId>Participant_774784d5-c816-41e5-9f63-942da4faed2a</tns:laneId>
                           <tns:gatewayQuestion>null</tns:gatewayQuestion>
                           <tns:exits>Activity_d3e18ed7-7e11-472c-9b54-287fdf7fb279</tns:exits>
-                        </tns:hookup>
-                        <tns:hookup>
-                          <tns:id>Event_e5289a08-18b9-48ea-91b6-a122306cfa2e</tns:id>
-                          <tns:type>end</tns:type>
-                          <tns:laneId>Participant_e4e2815d-edd1-44f5-a9ce-19068058d343</tns:laneId>
-                          <tns:gatewayQuestion>null</tns:gatewayQuestion>
-                          <tns:enters>Activity_26acbca2-f14c-41bd-992b-60f70360d038</tns:enters>
-                        </tns:hookup>
-                        <tns:hookup>
-                          <tns:id>Gateway_03femcz</tns:id>
-                          <tns:type>gateway</tns:type>
-                          <tns:laneId>Participant_e4e2815d-edd1-44f5-a9ce-19068058d343</tns:laneId>
-                          <tns:gatewayName>Шлюз ИЛИ</tns:gatewayName>
-                          <tns:gatewayType>OR</tns:gatewayType>
-                          <tns:gatewayQuestion>null</tns:gatewayQuestion>
-                          <tns:exits>Activity_26acbca2-f14c-41bd-992b-60f70360d038</tns:exits>
-                          <tns:exits>Activity_a0a417da-b511-4458-ab48-3bf27af2fd8b</tns:exits>
-                          <tns:exits>Activity_11084845-9bc7-4a39-af0b-a0d03c474fd9</tns:exits>
-                          <tns:enters>Activity_0qepsca</tns:enters>
                         </tns:hookup>
                         <tns:hookup>
                           <tns:id>Gateway_1crl5dt</tns:id>
@@ -7079,6 +7006,39 @@
                           <tns:exits>Activity_61cad644-bfc1-4034-983a-07db0187228a</tns:exits>
                           <tns:exits>Activity_17z9wwz</tns:exits>
                           <tns:enters>Activity_09uc3mx</tns:enters>
+                        </tns:hookup>
+                        <tns:hookup>
+                          <tns:id>Gateway_0icj4j0</tns:id>
+                          <tns:type>gateway</tns:type>
+                          <tns:laneId>Participant_e4e2815d-edd1-44f5-a9ce-19068058d343</tns:laneId>
+                          <tns:gatewayName>Шлюз ИЛИ</tns:gatewayName>
+                          <tns:gatewayType>OR</tns:gatewayType>
+                          <tns:gatewayQuestion>null</tns:gatewayQuestion>
+                          <tns:exits>Activity_0bk9hq4</tns:exits>
+                          <tns:exits>Activity_0dq5gxn</tns:exits>
+                          <tns:exits>Activity_05bywo4</tns:exits>
+                          <tns:enters>Activity_0qepsca</tns:enters>
+                        </tns:hookup>
+                        <tns:hookup>
+                          <tns:id>Event_1g3c61p</tns:id>
+                          <tns:type>end</tns:type>
+                          <tns:laneId>Participant_821ded8f-be46-41b3-8728-cd9f2ef36f49</tns:laneId>
+                          <tns:gatewayQuestion>null</tns:gatewayQuestion>
+                          <tns:enters>Activity_05bywo4</tns:enters>
+                        </tns:hookup>
+                        <tns:hookup>
+                          <tns:id>Event_1oh5otu</tns:id>
+                          <tns:type>end</tns:type>
+                          <tns:laneId>Participant_e4e2815d-edd1-44f5-a9ce-19068058d343</tns:laneId>
+                          <tns:gatewayQuestion>null</tns:gatewayQuestion>
+                          <tns:enters>Activity_0bk9hq4</tns:enters>
+                        </tns:hookup>
+                        <tns:hookup>
+                          <tns:id>Event_0ekpj4f</tns:id>
+                          <tns:type>end</tns:type>
+                          <tns:laneId>Participant_774784d5-c816-41e5-9f63-942da4faed2a</tns:laneId>
+                          <tns:gatewayQuestion>null</tns:gatewayQuestion>
+                          <tns:enters>Activity_0dq5gxn</tns:enters>
                         </tns:hookup>
                         <tns:lanes>
                           <tns:id>Participant_774784d5-c816-41e5-9f63-942da4faed2a</tns:id>
@@ -7116,16 +7076,16 @@
             </ns2:MessagePrimaryContent>
           </SenderProvidedResponseData>
           <ns2:MessageMetadata xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2">
-            <ns2:MessageId>55b2ab29-abfe-11ef-8a0f-3a09311888cb</ns2:MessageId>
+            <ns2:MessageId>9a1c3fba-b87d-11ef-b8be-4656814f85ff</ns2:MessageId>
             <ns2:MessageType>RESPONSE</ns2:MessageType>
             <ns2:Sender>
               <ns2:Mnemonic>MNSV50</ns2:Mnemonic>
             </ns2:Sender>
-            <ns2:SendingTimestamp>2024-11-26T16:57:12.063+03:00</ns2:SendingTimestamp>
+            <ns2:SendingTimestamp>2024-12-12T14:38:26.870+03:00</ns2:SendingTimestamp>
             <ns2:Recipient>
               <ns2:Mnemonic>U798301</ns2:Mnemonic>
             </ns2:Recipient>
-            <ns2:DeliveryTimestamp>2024-11-26T16:59:17.801+03:00</ns2:DeliveryTimestamp>
+            <ns2:DeliveryTimestamp>2024-12-12T14:39:51.045+03:00</ns2:DeliveryTimestamp>
             <ns2:Status>messageIsDelivered</ns2:Status>
           </ns2:MessageMetadata>
         </ns2:Response>
@@ -7140,10 +7100,10 @@
                   <ds:Transform Algorithm="urn://smev-gov-ru/xmldsig/transform" />
                 </ds:Transforms>
                 <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256" />
-                <ds:DigestValue>VosH5MXDfGcLNvo2mlBfJPGSgZqmQCD4gee0mzRJ6XI=</ds:DigestValue>
+                <ds:DigestValue>i958f7l9+7Qcg+BUdfKi2MX0GTuDgjWLHbHp4CMkWOA=</ds:DigestValue>
               </ds:Reference>
             </ds:SignedInfo>
-            <ds:SignatureValue>ChUAQLJNltU9GIWWXauLYFFgUqSZ8GQWpJoRvc0taXocvtJ4RpqoQ+k4gKjGADdthUaSVlNcWVolt4TKikvGHw==</ds:SignatureValue>
+            <ds:SignatureValue>MrUMEbHIUF1uRxIwLXX3UEYt2+xesYWS84/c2fxw5D6Yt6zgkDkF1N1/o/Hbd366Mp9xyFWGDdNG3GnPjqM/wA==</ds:SignatureValue>
             <ds:KeyInfo>
               <ds:X509Data>
                 <ds:X509Certificate>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</ds:X509Certificate>
