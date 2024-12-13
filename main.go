@@ -70,7 +70,7 @@ func decodeRejectReasonsFromDict(dict *os.File, rejections map[string]string) er
 
 						if _, ok := rejections[data["name"].(string)]; ok {
 							rejections[data["name"].(string)] = attr.Value
-							fmt.Printf("found reason record %s\n", attr.Value)
+							//fmt.Printf("found reason record %s\n", attr.Value)
 						}
 					}
 				}
@@ -123,15 +123,13 @@ func decodeNegativeMeaningsFromDict(dict *os.File, negMeanings map[CriterionStru
 }
 
 func main() {
-	logFile, err := os.Create("log")
-	if err != nil {
-		log.Printf("couldn't create log file: %v", err)
-	}
 	fileSystem := os.DirFS(".")
 
-	indent := "    "
+	indent := "        "
+	sumRej, sumNeg := 0, 0
 
-	text := `do
+	text := `--добавляем причины отказов для опала по всем схемам
+do
 $$
 declare
 	rec record;
@@ -143,7 +141,7 @@ declare
 	exist bool;
 begin
 	raise info 'Beginning -----------------------------------';
-	for rec in (select scheme from regadm.m_projects where scheme = 'kostgo') loop
+	for rec in (select scheme from regadm.m_projects) loop  -- where scheme = 'kostgo' (если нужно на одну схему для потестить)
 		perform set_config('search_path', rec.scheme, true);
 		raise info '%', rec.scheme;
 
@@ -157,7 +155,8 @@ begin
 
 	fs.WalkDir(fileSystem, "reglaments", func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
-			logFile.Write([]byte("couldn't open reglaments dir: " + err.Error()))
+			log.Printf("couldn't open reglaments dir: %v", err)
+			fmt.Scanln()
 			os.Exit(1)
 		}
 		if d.IsDir() {
@@ -166,11 +165,11 @@ begin
 		fmt.Println(path)
 
 		service := strings.Split(d.Name(), ".")[0]
-		fmt.Println(service)
+		//fmt.Println(service)
 
 		reglament, err := os.Open(path)
 		if err != nil {
-			logFile.Write([]byte(fmt.Sprintf("couldn't open reglament at path \"%s\": %v", path, err)))
+			log.Printf("couldn't open reglament at path \"%s\": %v", path, err)
 			return nil
 		}
 		defer reglament.Close()
@@ -182,6 +181,8 @@ begin
 
 		var rejectionReason string
 		var crit CriterionStruct
+
+		foundRejectReasonDict, foundNegativeMeaningDict := true, true
 
 		for {
 			token, err := decoder.Token()
@@ -195,7 +196,7 @@ begin
 				case "criterion":
 					err = decoder.DecodeElement(&crit, &t)
 					if err != nil {
-						logFile.Write([]byte(fmt.Sprintf("criterion parsing failure in reglament at path \"%s\": %v", path, err)))
+						log.Printf("criterion parsing failure in reglament at path \"%s\": %v", path, err)
 						return nil
 					}
 					//fmt.Printf("%v\n", crit)
@@ -203,7 +204,7 @@ begin
 					var rej RejectionReasonStruct
 					err = decoder.DecodeElement(&rej, &t)
 					if err != nil {
-						logFile.Write([]byte(fmt.Sprintf("rejectionReason parsing failure in reglament at path \"%s\": %v", path, err)))
+						log.Printf("rejectionReason parsing failure in reglament at path \"%s\": %v", path, err)
 						return nil
 					}
 					rejectionReason = rej.Name
@@ -232,32 +233,42 @@ begin
 		rejectReasonDict, usedRejDict, err := openDictionary("rejectReason", service)
 		if err != nil {
 			// add to output file
-			logFile.Write([]byte(fmt.Sprintf("couldn't open rejectReason dictionary: %v", err)))
+			log.Printf("couldn't open rejectReason dictionary: %v", err)
 		} else {
 			defer rejectReasonDict.Close()
 			err = decodeRejectReasonsFromDict(rejectReasonDict, rejections)
 			if err != nil {
 				//write to output file error message
-				logFile.Write([]byte(fmt.Sprintf("couldn't decode rejectReason dictionary: %v", err)))
+				log.Printf("couldn't decode rejectReason dictionary: %v", err)
 			}
+		}
+		if rejectReasonDict == nil {
+			foundRejectReasonDict = false
 		}
 
 		negativeMeaningDict, usedReasonDict, err := openDictionary("reasonForSuccessDecision", service)
 		if err != nil {
 			// add to output file
-			logFile.Write([]byte(fmt.Sprintf("couldn't open reasonForSuccessDecision dictionary: %v", err)))
+			log.Printf("couldn't open reasonForSuccessDecision dictionary: %v", err)
 		} else {
 			defer negativeMeaningDict.Close()
 			err = decodeNegativeMeaningsFromDict(negativeMeaningDict, negMeanings)
 			if err != nil {
 				//write to output file error message
-				logFile.Write([]byte(fmt.Sprintf("couldn't decode reasonForSuccessDecision dictionary: %v", err)))
+				log.Printf("couldn't decode reasonForSuccessDecision dictionary: %v", err)
 			}
+		}
+		if negativeMeaningDict == nil {
+			foundNegativeMeaningDict = false
 		}
 
 		i := 0
-		if len(rejections) != 0 {
-			text += "\n" + indent[:2] + "--Used " + usedRejDict
+		if len(rejections) == 0 || !foundRejectReasonDict {
+			text += "\n" + indent + "--Not found \"rejectReason\" dictionary OR no rejections in reglament"
+		} else {
+			text += "\n" + indent[:len(indent)/2] + "--Used " + usedRejDict
+			text += fmt.Sprintf("\n%sraise info 'found %d reasons for %s';", indent[:len(indent)/2], len(rejections), service)
+			sumRej += len(rejections)
 			for rejectName, rejectId := range rejections {
 				i++
 				if len([]rune(rejectName)) >= 1000 {
@@ -278,8 +289,12 @@ begin
 			}
 			text += "\n"
 		}
-		if len(negMeanings) != 0 {
-			text += "\n" + indent[:2] + "--Used " + usedReasonDict
+		if len(negMeanings) == 0 || !foundNegativeMeaningDict {
+			text += "\n" + indent + "--Not found \"reasonForSuccessDecision\" dictionary OR no negativeMeanings in reglament"
+		} else {
+			text += "\n" + indent[:len(indent)/2] + "--Used " + usedReasonDict
+			text += fmt.Sprintf("\n%sraise info 'found %d additional reasons for %s';", indent[:len(indent)/2], len(negMeanings), service)
+			sumNeg += len(negMeanings)
 			for obj, negMeanId := range negMeanings {
 				i++
 				if len([]rune(obj.NegativeMeaning)) >= 1000 {
@@ -299,45 +314,50 @@ begin
 					service, i, negMeanId, obj.NegativeMeaning, obj.NegativeMeaning)
 			}
 		}
-		text += "\n\n" + indent[:4] + "-----------------------------------------"
+		text += "\n\n" + indent[:len(indent)/2] + "-----------------------------------------"
 
 		return nil
 	})
-	text += "\n" + `
+	text += fmt.Sprintf("\n%sraise info 'found %d reasons from rejectReason dictionary';", indent, sumRej) +
+		fmt.Sprintf("\n%sraise info 'found %d additional reasons from reasonForSuccessDecision dictionary';", indent, sumNeg) +
+		fmt.Sprintf("\n%sraise info 'found %d total reasons for Opal';", indent, sumRej+sumNeg) +
+		"\n" + indent + "--p.s. found != added. There will be less in DB because of not being able to find GUID or column limitation\n" + `
 		for rejection in (select unnest(rejections)) loop
 			exist := false;
 			for rejectionInDB in (select unnest(rejectionsInDB)) loop
 				if rejection ilike '%'||rejectionInDB||'%' then
 					exist := true;
-					raise info 'already exist same code_kcr: %', rejection;
+					--raise info 'already exist same code_kcr: %', rejection;
 					exit;
 				end if;
 			end loop;
 			
 			if exist != true then
-				--execute rejection;
-				raise info '%', rejection;
+				execute rejection;				-- здесь можно закомментить одну строку, раскомментить другую
+				--raise info '%', rejection;	-- и прогнать в холостую, чтобы проверить, что все окей
 			end if;
 		end loop;
 
 		update d_ref_dependents set dependent_type=key_type where code_kcr is not null;
 	end loop;
 end;
-$$;`
+$$;
 
-	text += "\n\n\n" + `
+
+
 --запрос с фильтром для проверки созданных отказов на схеме
 select * from <scheme>.d_ref_dependents where alias like 'Opal%' and alias not like 'OpalRejection';
 
 
 --чистка бд от созданных для опала отказов
+--(должно быть безопасно, но проверьте по select'у сначала)
 do
 $$
 declare
 	rec record;
 	key_type int8;
 begin
-	for rec in (select scheme from regadm.m_projects where scheme = 'kostgo') loop
+	for rec in (select scheme from regadm.m_projects) loop  -- where scheme = 'kostgo' (если нужно на одну схему для потестить)
 		perform set_config('search_path', rec.scheme, true);
 		raise info '%', rec.scheme;
 
@@ -348,13 +368,15 @@ $$;`
 
 	outputFile, err := os.Create("script_to_add_rejection_reasons_for_opal.sql")
 	if err != nil {
-		log.Fatalf("output creation failure: %v", err)
+		log.Printf("output creation failure: %v", err)
 	}
 	defer outputFile.Close()
 	_, err = outputFile.Write([]byte(text))
 	if err != nil {
-		log.Fatalf("writing output failure: %v", err)
+		log.Printf("writing output failure: %v", err)
 	}
+	fmt.Println("finished. You can check output file now")
+	fmt.Scanln()
 	//fmt.Println(text)
 }
 
